@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'cadastro-fornecedor02',
     loadChildren: () => import('./pages/cadastro-fornecedor02/cadastro-fornecedor02.module').then( m => m.CadastroFornecedor02PageModule)
   },
+  {
+    path: 'cadastro-cliente',
+    loadChildren: () => import('./pages/cadastro-cliente/cadastro-cliente.module').then( m => m.CadastroClientePageModule)
+  },
 
 
 ];

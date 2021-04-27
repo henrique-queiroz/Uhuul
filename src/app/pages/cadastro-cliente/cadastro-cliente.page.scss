@@ -1,0 +1,92 @@
+.div_esquerda{
+    width: 40%;
+    height: 100%;
+    background-color: #100A0A;
+    margin: none;
+    float: left;
+}
+.container_icon{
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
+    margin: 60px 0 0 20px;
+    float: left;
+    border: none;
+    color: black;
+}
+.div_direita{
+    width: 46%;
+    height: 80%;
+    float: right;
+    margin: 60px 100px 0 0;
+    box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
+    hr{
+        margin-top: -400px;
+    }
+    p{
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        margin: 25px 0 0 0;
+        font-size: 14px;
+        text-align: center;
+    }
+    ion-input{
+        border: rgba(241, 241, 241, 0.77) solid;
+        width: 70%;
+        margin: 50px 15% 0 15%;
+        font-family: 'Montserrat', sans-serif;
+    }
+    ion-button{
+        margin: 35px 15% 0 15%;
+        border: #A26DF8 solid;
+        color: #A26DF8;
+        width: 70%;
+        height: 70px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+    }
+    .input-especial{
+        margin-top: 20px;
+    }
+}
+.criar_conta{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+img{
+    position: absolute;
+    left: 70px;
+    top: 100px;
+    right: 70px;
+    object-fit: cover;  
+    width: 406px;
+    height: 350px;
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    text-align: center;
+    font-size: 48px;
+}
+hr{
+    border-bottom: 1px solid rgb(0, 0, 0);
+    width: 80%;
+    padding: 0 0 65% 0;
+}
+p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 25px 0 0 0;
+    font-size: 18px;
+    text-align: center;
+}
+ion-button{
+    margin: 40px 15% 0 30%;
+    border: #F86D70 solid;
+    color: #F86D70;
+    width: 40%;
+    height: 40px;
+}
