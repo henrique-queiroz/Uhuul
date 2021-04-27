@@ -11,6 +11,19 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'cadastro-fornecedor',
+    loadChildren: () => import('./pages/cadastro-fornecedor/cadastro-fornecedor.module').then( m => m.CadastroFornecedorPageModule)
+  },  {
+    path: 'cadastro-fornecedor01',
+    loadChildren: () => import('./pages/cadastro-fornecedor01/cadastro-fornecedor01.module').then( m => m.CadastroFornecedor01PageModule)
+  },
+  {
+    path: 'cadastro-fornecedor02',
+    loadChildren: () => import('./pages/cadastro-fornecedor02/cadastro-fornecedor02.module').then( m => m.CadastroFornecedor02PageModule)
+  },
+
+
 ];
 
 @NgModule({
