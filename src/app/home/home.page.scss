@@ -19,7 +19,7 @@ ion-header{
     }
     .btn_contato{
       font-size: 10px;
-      margin: 0 330px 0 0;
+      margin: 0 550px 0 0;
     }
     .btn_entrar{
       font-size: 10px;
@@ -31,7 +31,7 @@ ion-header{
 }
 
 ion-content{
-    .container{
+    #ancora_inicio{
       width: 100%;
       height: 300px;
       background: linear-gradient(to right,  rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));
@@ -82,38 +82,42 @@ ion-content{
       }
     }
   }
-  .sobre{
+  #ancora_sobre{
     width: 100%;
-    height: 300px;
+    height: 400px;
   
     .titulo_sobre{
       font-size: 32px;
       text-align: center;
       font-family: 'Dancing Script', cursive;
     }
-    
+
     ion-grid{
       ion-row{
-        display: inline;
+        padding: 10px;
+        padding-left: 220px;
+        border: 1px solid black;
         ion-col{
-          display: flex;
-          flex-direction: row;
-          ion-item{
-            position: center;
-            .icone_sobre{
-              font-size: 30px;
-              padding: 12px 0 0;
-              text-align: right;
+          padding-left: 6px;
+          border: 1px solid black;
+          
+          .pergunta_sobre{
+            font-weight: bold;
+            font-size: 20px;
+            padding-top: 12px;     
           }
+          .icone_sobre{
+            font-size: 50px;
+            color: #201313;
           }
         }
       }
     }
   }
-  .contato{
+  #ancora_contato{
     width: 100%;
-    height: 500px;
-    //background-color: #201313;
+    height: 560px;
+    background-color: #201313;
 
     .display{
       display: flex;
@@ -122,25 +126,93 @@ ion-content{
     
     .titulo_contato{
       font-size: 32px;
-      //color: white;
+      color: white;
       text-align: center;
       padding-top: 40px;
       font-family: 'Dancing Script', cursive;
+      padding-bottom: 30px;
     }
 
     .dados{
       width: 50%;
       display: flex;
       flex-direction: column;
+      margin: 0 0 0 50px;
     }
-    .contato{
+
+    .nome{
+      width: 190px;
+    }
+
+    .cor{
+      border-bottom: 1px white solid;
+      font-size: 12px;
+    }
+
+    .rotulo{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 0 0 20px 0;
+    }
+
+    .fundo_item{
+      --background:#201313;
+      color:white;
+    
+    }
+
+    .btn_entrar_contato{
+      //width: 200px;
+      margin: 30px 15px 0 15px;
+    }
+
+    .divisao_nome{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .tt_contatos{
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 1px white solid;
+      padding-bottom: 12px;
+    }
+
+    .t_contato{
+      font-size: 14px;
+      font-weight: bold;
+      padding-top: 15px;
+    }
+
+    .p_contato{ 
+      font-size: 12px;
+      padding-top: 8px;
+    }
+
+    .icones_redes{
+      font-size: 24px;
+      padding-top: 10px;
+      padding-right: 10px;
+    }
+    
+    .filete{
+      width: 2px;
+      height: 400px;
+      background-color: white;
+      margin: 0 50px 0 50px;
+    }
+
+    .contato_dados{
       width: 50%;
       display: flex;
       flex-direction: column;
+      color: white;
+      padding: 20px 0 0 0;
+      margin: 0 50px 0 0;
 
       .contato_redes{
         display: inline;
-        //color: white;
       }
     }
   }

@@ -28,11 +28,9 @@ ion-header{
 
 ion-content{
     .container{
-        position: fixed;
         width: 100%;
-        height: 100%;
+        height: 1000px;
         background: white;
-        margin: 0;
 
         .container_icon{
             width: 50px;
@@ -45,7 +43,6 @@ ion-content{
             color: black;
         }
         .container_cadastro_fornecedor{
-            position: fixed;
             width: 50%;
             height: 85%;
             float: left;
