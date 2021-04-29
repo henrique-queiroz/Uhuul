@@ -32,53 +32,57 @@
 
 </ion-header>
 
-<ion-content>
+  <ion-content>
 
-  <div class = "container">
-
-    <ion-button class = "container_icon" color = "white">
-      <ion-icon name="chevron-back-outline"></ion-icon>
-    </ion-button>
-
-    <div class = "container_cadastro_fornecedor">
-
-      <h1>Cadastrar Empresa</h1>
-      
-      <hr size = 50>
-
-    <!-------------------->
-
-        <p>Precisaremos de algumas informações sobre a localização</p>
-
-        <h6>CEP</h6>
-
-          <ion-input type = "number" value = "" color = "primary" placeholder = "Digite somente números"></ion-input>
-
-        <h6>Cidade</h6>
-
-          <ion-input value = "" color = "primary" placeholder = ""></ion-input>
-
-        <h6>Bairro</h6>
-
-          <ion-input value = "" color = "primary" placeholder = ""></ion-input>
-
-        <h6>Endereço</h6>
-
-          <ion-input class = "input_endereco" value = "" color = "primary" placeholder = "Nome da rua"></ion-input>
-         
-        <label class = "label_num">
-          <h6>Número</h6>
-            <ion-input value = "" color = "primary" placeholder = ""></ion-input>
-        </label>
-
-      <!-------------------->
-
-      <ion-button color = "white">
-        Próxima Etapa >
+      <ion-button class = "container_icon" color = "white" href = "cadastro-fornecedor">
+        <ion-icon name="chevron-back-outline"></ion-icon>
       </ion-button>
 
-    </div>
+      <div class = "container_cadastro_fornecedor">
 
-  </div>
+        <div class = "icon_bolinhas">
+          <ion-icon class = "bola01" name = "ellipse-sharp"></ion-icon>
+          <ion-icon class = "bola02" name = "ellipse-sharp"></ion-icon>
+          <ion-icon class = "bola03" name = "ellipse-sharp"></ion-icon>
+        </div>
+  
 
-</ion-content>
+        <h1>Cadastrar Empresa</h1>
+        
+        <hr size = 50>
+
+        <!-------------------->
+
+          <p>Precisaremos de algumas informações sobre a localização</p>
+
+          <h6>CEP</h6>
+
+            <ion-input type = "number" value = "" color = "primary" placeholder = "Digite somente números"></ion-input>
+
+          <h6>Cidade</h6>
+
+            <ion-input value = "" color = "primary" placeholder = ""></ion-input>
+
+          <h6>Bairro</h6>
+
+            <ion-input value = "" color = "primary" placeholder = ""></ion-input>
+
+          <label class = "label_endereco">
+            <h6>Endereço</h6>
+              <ion-input class = "input_endereco" value = "" color = "primary" placeholder = "Nome da rua"></ion-input>
+          </label>  
+
+          <label class = "label_num">
+            <h6>Número</h6>
+              <ion-input value = "" color = "primary" placeholder = ""></ion-input>
+          </label>
+
+        <!-------------------->
+
+        <ion-button color = "white" href = "cadastro-fornecedor02">
+          Próxima Etapa >
+        </ion-button>
+
+      </div>
+
+  </ion-content>
