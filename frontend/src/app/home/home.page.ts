@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -19,8 +21,21 @@ export class HomePage {
     {pergunta: 'Quem somo atualmente?', resposta: '...', icone1: 'chevron-down-outline', icone2: 'chevron-up-outline'}
   ];
 
-  constructor() {}
-  scroll(el: HTMLElement) {
-    el.scrollIntoView();
-}
+  constructor(private router: Router) { }
+
+  cadastro_cliente() {
+    this.router.navigate(['/cadastro-cliente']);
+  }
+
+  cadastro_empresa() {
+    this.router.navigate(['/cadastro-fornecedor']);
+  }
+
+  //constructor(private menu: MenuController) { }
+
+  //openFirst() {
+    //this.menu.enable(true, 'first');
+    //this.menu.open('first');
+  //}
+
 }
