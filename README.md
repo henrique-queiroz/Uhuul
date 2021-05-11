@@ -1,7 +1,7 @@
-## Acesse a pasta frontend e execute o comando para baixar as dependencia do projeto
+- Acesse a pasta frontend e execute o comando para baixar as dependências do projeto
 ```npm i ```
 
-Outro usuário fez alterações
+- Outro usuário fez alterações
 
 ```git pull```
 
