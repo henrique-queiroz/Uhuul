@@ -1,92 +1,108 @@
-.div_esquerda{
-    width: 40%;
-    height: 100%;
-    background-color: #100A0A;
-    margin: none;
-    float: left;
+//Fontes
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300;700&display=swap');
+
+*{
+    font-family: 'Montserrat';
 }
-.container_icon{
-    width: 50px;
-    height: 50px;
-    background: white;
-    box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
-    margin: 60px 0 0 20px;
-    float: left;
-    border: none;
-    color: black;
-}
-.div_direita{
-    width: 46%;
-    height: 80%;
-    float: right;
-    margin: 60px 100px 0 0;
-    box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
-    hr{
-        margin-top: -400px;
+ion-content{
+    .div_esquerda{
+        width: 40%;
+        background: linear-gradient(to top left, rgb(32, 19, 19), rgb(16, 10, 10));
+        margin: none;
+        padding: none;
+        float: left;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        color: white;
+
+        .centro_esquerda{
+            margin: auto auto;
+            ion-item{
+                --background: rgba(255, 255, 255, 0);
+                color: white;
+                .titulo_esquerda{
+                    font-family: 'Dancing Script';
+                    font-size: 38px;
+                    margin: auto auto;
+                }
+            }
+            ion-item{
+                .text_esquerda{
+                    font-family: 'Montserrat';
+                    font-size: 16px;
+                }
+            }
+            ion-button{
+                color:#F86D70;
+                font-weight: bold;
+                --border-color: #F86D70;
+                --border-radius: 0;
+                --padding-bottom: 20px;
+                --padding-end: 60px;
+                --padding-start: 60px;
+                --padding-top: 20px;
+                margin: 0 26.5%
+            }
+        }
     }
-    p{
-        color: black;
-        font-family: 'Montserrat', sans-serif;
-        margin: 25px 0 0 0;
-        font-size: 14px;
-        text-align: center;
+    .div_direita{
+        width: 60%;
+        float: right;
+        margin: none;
+        padding: none;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        //box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
+        .centro_direita{
+            margin: auto auto;
+            width: 60%;
+
+            ion-item{
+                .arrow-back{
+                    width: 40px;
+                    font-size: 30px;
+                    color: black;
+                    //--background: black;
+                    --border-radius: 0;
+                    --padding-bottom: 0px;
+                    --padding-end: 0px;
+                    --padding-start: 0px;
+                    --padding-top: 0px;
+                }
+                .criar_conta{
+                    font-family: 'Montserrat';
+                    font-weight: bold;
+                    font-size: 32px;
+                }
+            }
+            ion-item{
+                .text_direita{
+                    font-family: 'Montserrat';
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+            }
+            ion-input{
+                --placeholder-color: black;
+                --placeholder-opacity: 1;
+                border: solid #EEE7E7 1px;
+                --padding-bottom: 12px;
+                --padding-start: 15px;
+                --padding-top: 12px;
+                margin-bottom: 20px;
+            }
+            ion-button{
+                font-family: 'Montserrat';
+                color:#A26DF8;
+                --border-color: #A26DF8;
+                --border-radius: 0;
+                --padding-bottom: 20px;
+                --padding-end: 94px;
+                --padding-start: 94px;
+                --padding-top: 20px;
+            }
+        }
     }
-    ion-input{
-        border: rgba(241, 241, 241, 0.77) solid;
-        width: 70%;
-        margin: 50px 15% 0 15%;
-        font-family: 'Montserrat', sans-serif;
-    }
-    ion-button{
-        margin: 35px 15% 0 15%;
-        border: #A26DF8 solid;
-        color: #A26DF8;
-        width: 70%;
-        height: 70px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-    }
-    .input-especial{
-        margin-top: 20px;
-    }
-}
-.criar_conta{
-    color: black;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 36px;
-}
-img{
-    position: absolute;
-    left: 70px;
-    top: 100px;
-    right: 70px;
-    object-fit: cover;  
-    width: 406px;
-    height: 350px;
-}
-h1{
-    font-family: 'Dancing Script', cursive;
-    color: white;
-    text-align: center;
-    font-size: 48px;
-}
-hr{
-    border-bottom: 1px solid rgb(0, 0, 0);
-    width: 80%;
-    padding: 0 0 65% 0;
-}
-p{
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    margin: 25px 0 0 0;
-    font-size: 18px;
-    text-align: center;
-}
-ion-button{
-    margin: 40px 15% 0 30%;
-    border: #F86D70 solid;
-    color: #F86D70;
-    width: 40%;
-    height: 40px;
 }

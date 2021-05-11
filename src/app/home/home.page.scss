@@ -1,6 +1,357 @@
+//Fontes
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300;700&display=swap');
+
 *{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
 }
+
+ion-header{
+  ion-toolbar{
+    --background: linear-gradient(to right, rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));
+    width: 100%;
+
+    .menu{
+      max-width: 980px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+
+      ion-title{
+        --title-width: 100px;
+        img{
+          width: 10%;
+          padding: 5px 0;
+        }
+      }
+      ion-buttons{
+        .btn_font{
+          font-size: 10px;
+          color: black;
+        }
+      }
+    }
+  }
+  ion-toolbar{
+    .menu{
+      max-width: 980px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+
+      ion-title{
+        --title-width: 100px;
+        img{
+          width: 10%;
+          padding: 5px 0;
+        }
+      }
+      ion-buttons{
+        ion-icon{
+          font-size: 40px;
+        }
+        }
+      }
+    }
+  }
+
+
+ion-content{
+  .card_inicio{
+    --background: linear-gradient(to right, rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));
+    padding: 0;
+    margin: 0;
+
+    .inicio{  
+      max-width: 980px;
+      width: 100%;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+
+      img{
+        width: 28%;
+        height: 10%;
+        margin: 10% 2% 6% 2%;
+      }
+      .colunm{
+        .item_titulo{
+          --background: rgba(255, 255, 255, 0);
+          margin-top: 10%;
+  
+          .titulo_inicio{
+            padding: 5% 15% 20px 2%;
+            font-family: 'Dancing Script';
+            font-size: 3.4rem;
+          }
+        }
+  
+        .item_text{
+          --background: rgba(255, 255, 255, 0);
+  
+          .text_inicio{
+            padding: 0% 15% 20px 2%;
+            margin: 0;
+            font-size: 1.6rem;
+            font-family: 'Montserrat';
+          }
+        }
+        .btn_cadastrar{
+          display: flex;
+          align-items: center;
+          margin: 2% 16% 6% 4%;
+          color: #8236FC;
+          border-color: #8236FC;
+        }
+      }
+    }
+  }
+  .card_info{
+    padding: 40px 0;
+    margin: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    .info{
+      max-width: 980px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      ion-grid{
+        padding: 0 50px;
+  
+        ion-row{  
+          ion-col{
+            display: flex;
+            flex-direction: column;
+            padding: 20px 20px;
+    
+            .titulo_info{
+              font-size: 20px;
+              font-weight: bold;
+              text-align: center;
+              font-family: 'Dancing Script', cursive;
+              padding: 5px 0 20px 0;
+              color: black;
+            }
+            .paragrafo_info{
+              font-size: 15px;
+              text-align: justify;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+  .card_sobre{
+    padding-bottom: 70px;
+    margin: 0;
+
+    .sobre{
+      max-width: 500px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      //padding: 0 20vw;
+    }
+
+    ion-item{
+      .chamada_sobre{
+        font-family: 'Dancing Script', cursive;
+        font-size: 32px;
+        padding-bottom: 10px;
+      }
+    }
+    .item_perguntas{
+      --detail-icon-opacity: 1;
+      max-width: 960px;
+
+      .pergunta_sobre{
+        font-family: 'Montserrat';
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+      }
+    }
+  }
+  .card_rodape{
+    padding: 10px 0;
+    margin: 0;
+    background-color: #100A0A;
+
+    .rodape{
+      max-width: 1200px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+
+      ion-grid{
+        ion-row{
+          display: flex; 
+          ion-col{
+            --background: rgba(255, 255, 255, 0);
+            .titulo_rodape{
+              font-size: 26px;
+              color: white;
+              font-family: 'Dancing Script', cursive;
+            }
+          }	
+          ion-col{
+            --background: rgba(255, 255, 255, 0);
+            display: flex;
+            flex-direction: column;
+            .t_sobre_rodape{
+              color: white;
+              font-size: 16px;
+              font-weight: bold;
+              margin-bottom: 20px;
+            }
+            .p_sobre_rodape{
+              color: white;
+              font-size: 11px;
+              text-align: justify;
+            }
+          }
+          .contato{
+            --background: rgba(255, 255, 255, 0);
+            padding-left: 4%;
+            .t_info{
+              color: white;
+              font-size: 24px;
+              font-weight: bold
+            }
+            .infos{
+              color: white;
+              font-size: 12px;
+            }
+            .inline{
+              display: inline;
+              .icones{
+                color: white;
+                font-size: 24px;
+              }
+            }
+          }     
+        }
+      }
+      --background: rgba(255, 255, 255, 0);
+      .direitos{
+        color: white;
+        font-size: 11px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+/*@media (max-width: 881px){
+  ion-content{
+    .card_info{  
+      .info{
+        ion-grid{
+          ion-row{  
+            ion-col{      
+              .titulo_info{
+                font-size: 17px;
+              }
+              .paragrafo_info{
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}*/
+
+@media (max-width: 642px){
+  ion-content{
+    .card_inicio{
+      --background: linear-gradient(to right, rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));
+      padding: 0;
+      margin: 0;  
+      
+      .inicio{  
+        display: flex;
+        flex-direction: column;
+        img{
+          width: 30%;
+          margin: 20px 35%;
+        }
+        .colunm{
+          .item_titulo{
+            --background: rgba(255, 255, 255, 0);
+            margin-top: 0;
+  
+            .titulo_inicio{
+              padding: 0 40px 0 40px;
+              font-family: 'Dancing Script';
+              //font-size: 32px;
+            }
+          }
+          .item_text{
+            --background: rgba(255, 255, 255, 0);
+  
+            .text_inicio{
+              padding: 10px 40px 20px 40px;
+              margin: 0;
+              //font-size: 14px;
+              font-family: 'Montserrat';
+            }
+          }
+
+          ion-button{
+            display: flex;
+            align-items: center;
+            margin: 2% 10% 10% 10%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 384px){
+  ion-content{
+    .card_inicio{
+      .inicio{ 
+        .colunm{
+          .item_titulo{
+            .titulo_inicio{
+              padding: 0 40px 0 40px;
+              font-family: 'Dancing Script';
+              //font-size: 27px;
+            }
+          }
+          .item_text{
+            --background: rgba(255, 255, 255, 0);
+  
+            .text_inicio{
+              padding: 10px 40px 20px 40px;
+              margin: 0;
+              //font-size: 12px;
+              font-family: 'Montserrat';
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+ion-header ion-toolbar {
+  width: 100%;
+}
+
+ion-header ion-toolbar ion-title a img{
+  width: 60px;
+  min-width: 60px;
+}v
 
 ion-header{
   ion-toolbar{
@@ -30,35 +381,40 @@ ion-header{
   }
 }
 
+//Inicio
+ion-content .ancora_inicio{
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to right,  rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));
+  display: flex;
+}
+
+div.ancora_inicio img{
+  width: 400px;
+}
+
+div.ancora_inicio .block_cconta{
+  padding: 90px 150px 0px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.block_cconta .titulo{
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0 0 10px 0;
+  font-family: 'Dancing Script', cursive;
+}
+
+div.block_cconta .paragrafo{
+  font-size: 14px;
+  text-align: justify;
+  padding: 0 0 10px 0;
+}
+
+
 ion-content{
-    #ancora_inicio{
-      width: 100%;
-      height: 300px;
-      background: linear-gradient(to right,  rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));
-      display: flex;
-
-    .imagem_anuncio{
-      width: 400px;
-    }
-      
-     .block_cconta{
-      padding: 90px 50px 0 50px;
-      display: flex;
-      flex-direction: column;
-
-      .titulo{
-        font-size: 32px;
-        font-weight: bold;
-        padding: 0 0 10px 0;
-        font-family: 'Dancing Script', cursive;
-      }
-      .paragrafo{
-        font-size: 12px;
-        text-align: justify;
-        padding: 0 0 10px 0;
-      }
-     }
-  }
+     
   ion-grid{
     ion-row{
       padding: 50px 0 10px 0;
@@ -84,7 +440,7 @@ ion-content{
   }
   #ancora_sobre{
     width: 100%;
-    height: 400px;
+    height: 300px;
   
     .titulo_sobre{
       font-size: 32px;
@@ -96,15 +452,16 @@ ion-content{
       ion-row{
         padding: 10px;
         padding-left: 220px;
-        border: 1px solid black;
         ion-col{
           padding-left: 6px;
-          border: 1px solid black;
           
           .pergunta_sobre{
             font-weight: bold;
             font-size: 20px;
             padding-top: 12px;     
+          }
+          .resposta_sobre{
+            display: none;
           }
           .icone_sobre{
             font-size: 50px;
@@ -216,6 +573,7 @@ ion-content{
       }
     }
   }
+  
   .rodape{
     width: 100%;
     height: 270px;
@@ -266,4 +624,4 @@ ion-content{
       padding: 0 0 0 30px ;
     }
   }
-}
+}*/
