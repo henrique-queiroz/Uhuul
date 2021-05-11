@@ -1,77 +1,46 @@
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
 <ion-header>
-
   <ion-toolbar>
-    <ion-title>
-      <a href="home"><img src="/assets/Uhu!.png" alt="logo_uhu!"></a>
-    </ion-title>
-    <ion-buttons slot="secondary">
-      <ion-button class="btn_inicio">
-        Início
-      </ion-button>
-      <ion-button class="btn_sobre">
-        Sobre
-      </ion-button>
-      <ion-button class="btn_contato">
-        Contato
-      </ion-button>
-    </ion-buttons>
-
-    <ion-buttons slot="primary">
-      <ion-button class="btn_entrar" color="dark">
-        Entrar
-      </ion-button>
-      <ion-button class="btn_cconta" color="dark" fill="outline">
-        Criar Conta
-      </ion-button>
-    </ion-buttons>
+    <div class="menu">
+      <ion-title><img src="/assets/Uhu!.png"></ion-title>
+      <ion-buttons>
+        <ion-button class="btn_font espacamento" fill="clear">Entrar</ion-button>
+        <ion-button class="btn_font" fill="outline">Criar Conta</ion-button>
+      </ion-buttons>
+    </div>
   </ion-toolbar>
-
 </ion-header>
 
 <ion-content>
-
-    <ion-button class = "container_icon" color = "white" href = "cadastro-fornecedor01">
-      <ion-icon name="chevron-back-outline"></ion-icon>
-    </ion-button>
-
-    <div class = "container_cadastro_fornecedor">
-
-      <div class = "icon_bolinhas">
-        <ion-icon class = "bola01" name = "ellipse-sharp"></ion-icon>
-        <ion-icon class = "bola02" name = "ellipse-sharp"></ion-icon>
-        <ion-icon class = "bola03" name = "ellipse-sharp"></ion-icon>
-      </div>
-
-      <h1>Cadastrar Empresa</h1>
-      
-      <hr size = 50>
-
-      <!-------------------->
-
-        <p>Precisaremos de algumas informações de contato</p>
-
-        <h6>Telefone</h6>
-
-        <ion-input type = "number" value = "" color = "primary" placeholder = "Digite somente números"></ion-input>
-
-        <h6>Celular</h6>
-
-        <ion-input type = "number" value = "" color = "primary" placeholder = "Digite somente números"></ion-input>
-
-        <h6>E-mail</h6>
-
-        <ion-input type = "email" value = "" color = "primary" placeholder = "E-mail para contato"></ion-input>
-    
-      <!-------------------->
-
-      <ion-button color = "white" href = "home">
-        Próxima Etapa >
-      </ion-button>
-
+  <div class="centro">
+    <div class="icon_bolinhas">
+      <ion-icon class="bola01" name="ellipse-sharp"></ion-icon>
+      <ion-icon class="bola02" name="ellipse-sharp"></ion-icon>
+      <ion-icon class="bola03" name="ellipse-sharp"></ion-icon>
     </div>
+      
+    <ion-item lines="none">
+      <ion-button class="arrow-back" fill="clear" (click)="cadastro_empresa1()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-label class="titulo ion-text-center">Cadastrar Empresa</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label class="text ion-text-center">Precisaremos de algumas informações de contato</ion-label>
+    </ion-item>
 
+    <ion-item lines="none">
+      <ion-label class="label_input">Telefone</ion-label>
+    </ion-item>
+    <ion-input type="number" placeholder="Digite somente números"></ion-input>
+      
+    <ion-item lines="none">
+      <ion-label class="label_input">Celular</ion-label>
+    </ion-item>
+    <ion-input type="number" placeholder="Digite somente números"></ion-input>
+      
+    <ion-item lines="none">
+      <ion-label class="label_input">E-mail</ion-label>
+    </ion-item>
+    <ion-input type="email" placeholder="E-mail para contato"></ion-input>
+
+    <ion-button class="btn_proxima" fill="clear" (click)="home()">Próxima Etapa</ion-button>
+  </div>
 </ion-content>
