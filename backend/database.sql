@@ -3,18 +3,10 @@ CREATE DATABASE IF NOT EXISTS uhuu;
 
 USE uhuu;
 
-DROP TABLE IF EXISTS contact_type;
-CREATE TABLE IF NOT EXISTS contact_type (
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    description VARCHAR(80) NOT NULL
-);
-
 DROP TABLE IF EXISTS contact;
 CREATE TABLE IF NOT EXISTS contact (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    contact_type_id INT UNSIGNED NOT NULL,
-    value VARCHAR(80) NOT NULL,
-    FOREIGN KEY (contact_type_id) REFERENCES contact_type(id)
+    contact_number VARCHAR(11) NOT NULL
 );
 
 DROP TABLE IF EXISTS address;

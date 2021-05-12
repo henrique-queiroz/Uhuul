@@ -22,3 +22,37 @@
 `npm start`
 
 > have a great use
+
+### On the entering data in client
+# Api routes
+
+## /clients
+
+### get
+- if it returns true, api return this:
+{
+  "status": true,
+  "msg": "Tabela inserida"
+}
+
+- else:
+{
+  "status": false,
+  "msg": "Cadastro não pôde ser concluído",
+  "error": {
+    "code": "ER_DUP_ENTRY",
+    "errno": 1062,
+    "sqlState": "23000",
+    "sqlMessage": "Duplicate entry '11111111112' for key 'clients.cpf'"
+  }
+}
+
+[  ] UPDATE CLIENTS
+
+[  ] log int clients
+
+[  ] PGDP PROVIDERS
+
+[  ] eventos, contratos e convidados
+
+[  ] implementar o jwt
