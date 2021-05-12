@@ -1,68 +1,55 @@
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
-<ion-header>
-
-</ion-header>
-
 <ion-content>
+  <div class="div_esquerda">
+    <div class="centro_esquerda">
+      <ion-item lines="none">
+        <ion-label class="titulo_esquerda ion-text-center">Bem vindo de volta!</ion-label>
+      </ion-item>
 
-  <div class = "div_esquerda">
+      <img src="/assets/img_festa.png">
 
-    <h1>Bem vindo de volta!</h1>
-    
-    <img src = "/assets/img_festa.png">
-
-    <hr size = "50">
-
-    <p>Ainda não possui uma conta?</p>
-
-    <ion-button color = "white" href = "home">
-      Cadastrar-se
-    </ion-button>
-
-  </div>
-
-  <div class = "div_direita">
-
-    <h1 class = "criar_conta">Entre na sua conta</h1>
-    
-    <hr>
-
-    <p>Entre com uma rede social</p>
-
-    <div class = "botoes_redes">
-
-      <button ion-button class = "container_icon" color = "white">
-        <ion-icon name = "logo-google"></ion-icon>
-      </button>
-
-      <button ion-button class = "container_icon" color = "white">
-        <ion-icon name = "logo-facebook"></ion-icon>
-      </button>
-
-      <button ion-button class = "container_icon" color = "white">
-        <ion-icon name = "logo-instagram"></ion-icon>
-      </button>
-    
+      <ion-item lines="none">
+        <ion-label class="text_esquerda ion-text-center">Ainda não possui uma conta?</ion-label>
+      </ion-item>
+      <ion-button fill="outline" href="home">Cadastrar-se</ion-button>
     </div>
-
-    <p>Ou use seu email para entrar:</p>
-
-    <ion-input class = "input-especial" type = "text" color = "primary" placeholder = "E-mail ou nome de usuário"></ion-input>
-
-    <ion-input class = "input-especial" type = "password" color = "primary" placeholder = "Senha"></ion-input>
-
-    <label class = "checkbox">
-      <ion-checkbox color="light"></ion-checkbox>
-      <p>Mantenha-me conectado</p>
-    </label>
-
-    <ion-button color = "white" href = "home">
-      Entrar >
-    </ion-button>
-
   </div>
 
+  <div class="div_direita">
+    <div class="centro_direita">
+      <ion-item lines="none">
+        <ion-button class="arrow-back" fill="clear" (click)="home()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+        <ion-label class="criar_conta ion-text-center">Entre na sua conta</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label class="text_direita ion-text-center">Entre com uma rede social</ion-label>
+      </ion-item>
+
+      <div class="botoes_redes">
+        <ion-button class="container_icon" color="white">
+          <ion-icon name="logo-google"></ion-icon>
+        </ion-button>
+        <ion-button class="container_icon" color="white">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+        <ion-button class="container_icon" color="white">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </ion-button>
+      </div>
+
+      <ion-item lines="none">
+        <ion-label class="text_direita ion-text-center">Ou use seu email para entrar:</ion-label>
+      </ion-item>
+
+      <ion-input type="text" placeholder="E-mail ou nome de usuário"></ion-input>
+      <ion-input type="tel" placeholder="Senha"></ion-input>
+
+      <ion-label class="checkbox">
+        <ion-checkbox color="light"></ion-checkbox>
+        <ion-item lines="none">
+          <ion-label>Mantenha-me conectado</ion-label>
+        </ion-item>
+      </ion-label>
+      <ion-button fill="outline" href="home">Concluir cadastro</ion-button>
+    </div>
+  </div>
 </ion-content>

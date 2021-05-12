@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-cliente',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginClientePage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  home() {
+    this.router.navigate(['/home']);
+  }
 
   ngOnInit() {
   }
