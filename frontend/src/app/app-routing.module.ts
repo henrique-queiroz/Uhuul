@@ -37,6 +37,10 @@ const routes: Routes = [
   },  {
     path: 'eventos-geral-eventos',
     loadChildren: () => import('./pages/eventos-geral-eventos/eventos-geral-eventos.module').then( m => m.EventosGeralEventosPageModule)
+  },
+  {
+    path: 'eventos-servicos',
+    loadChildren: () => import('./pages/eventos-servicos/eventos-servicos.module').then( m => m.EventosServicosPageModule)
   }
 
 ];
