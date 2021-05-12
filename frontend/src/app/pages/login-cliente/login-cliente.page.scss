@@ -1,4 +1,146 @@
-.div_esquerda{
+//Fontes
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300;700&display=swap');
+
+*{
+    font-family: 'Montserrat';
+}
+ion-content{
+    .div_esquerda{
+        width: 40%;
+        background: linear-gradient(to top left, rgb(32, 19, 19), rgb(16, 10, 10));
+        margin: none;
+        padding: none;
+        float: left;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        color: white;
+
+        .centro_esquerda{
+            margin: auto auto;
+            ion-item{
+                --background: rgba(255, 255, 255, 0);
+                color: white;
+                .titulo_esquerda{
+                    font-family: 'Dancing Script';
+                    font-size: 38px;
+                    margin: auto auto;
+                }
+            }
+            ion-item{
+                .text_esquerda{
+                    font-family: 'Montserrat';
+                    font-size: 16px;
+                }
+            }
+            ion-button{
+                color:#F86D70;
+                font-weight: bold;
+                --border-color: #F86D70;
+                --border-radius: 0;
+                --padding-bottom: 20px;
+                --padding-end: 60px;
+                --padding-start: 60px;
+                --padding-top: 20px;
+                margin: 0 19%
+            }
+        }
+    }
+    .div_direita{
+        width: 60%;
+        float: right;
+        margin: none;
+        padding: none;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        //box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
+        .centro_direita{
+            margin: auto auto;
+            width: 60%;
+
+            ion-item{
+                .arrow-back{
+                    width: 40px;
+                    font-size: 28px;
+                    color: black;
+                    //--background: black;
+                    --border-radius: 0;
+                    --padding-bottom: 0px;
+                    --padding-end: 0px;
+                    --padding-start: 0px;
+                    --padding-top: 0px;
+                }
+                .criar_conta{
+                    font-family: 'Montserrat';
+                    font-weight: bold;
+                    font-size: 29px;
+                }
+            }
+            ion-item{
+                .text_direita{
+                    font-family: 'Montserrat';
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+            }
+            .botoes_redes{
+                margin-left: 25%;
+                .container_icon{
+                    --padding-bottom: 0;
+                    --padding-end: 0;
+                    --padding-start: 0;
+                    --padding-top: 0;
+                    margin: 0 10px;
+                    --box-shadow: 0;
+                    width: 40px;
+                    ion-icon{
+                        zoom: 2;
+                        color: #A26DF8;
+                    }
+                }   
+            }
+            ion-input{
+                --placeholder-color: black;
+                --placeholder-opacity: 1;
+                border: solid #EEE7E7 1px;
+                --padding-bottom: 12px;
+                --padding-start: 15px;
+                --padding-top: 12px;
+                margin-bottom: 20px;
+            }
+            .checkbox{
+                ion-checkbox{
+                    margin: 14px 0 0 15%;
+                    float: left;
+                    --border-style: solid;
+                    --border-color-checked: black;
+                    --border-color: black; 
+                    --checkmark-color: black;
+                    --border-radius: 5px;
+                    --size: 20px;   
+                }
+                ion-item{
+                    ion-label{
+                        font-family: 'Montserrat';
+                    }
+                }
+            }
+            ion-button{
+                font-family: 'Montserrat';
+                color:#A26DF8;
+                --border-color: #A26DF8;
+                --border-radius: 0;
+                --padding-bottom: 20px;
+                --padding-end: 94px;
+                --padding-start: 94px;
+                --padding-top: 20px;
+            }
+        }
+    }
+}
+
+/*.div_esquerda{
     width: 40%;
     height: 100%;
     background-color: #100A0A;
@@ -110,4 +252,4 @@ ion-button{
     color: #F86D70;
     width: 40%;
     height: 40px;
-}
+}*/
