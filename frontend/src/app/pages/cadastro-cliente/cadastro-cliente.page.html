@@ -10,11 +10,11 @@
       <ion-item lines="none">
         <ion-label class="text_esquerda ion-text-center">Já possui uma conta?</ion-label>
       </ion-item>
-      <ion-button fill="outline" href="home">Entrar</ion-button>
+      <ion-button fill="outline" (click)="login()">Entrar</ion-button>
     </div>
   </div>
 
-  <div class="div_direita">
+  <div class="div_direita">l
     <div class="centro_direita">
       <ion-item lines="none">
         <ion-button class="arrow-back" fill="clear" (click)="home()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
@@ -27,7 +27,7 @@
       <ion-input type="text" placeholder="Nome"></ion-input>
       <ion-input type="tel" placeholder="Número de celular"></ion-input>
       <ion-input type="text" placeholder="Data de nascimento"></ion-input>
-      <ion-button fill="outline" href="home">Concluir cadastro</ion-button>
+      <ion-button fill="outline" (click)="home_page_sistema()">Concluir cadastro</ion-button>
     </div>
   </div>
 </ion-content>

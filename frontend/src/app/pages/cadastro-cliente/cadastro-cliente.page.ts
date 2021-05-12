@@ -14,6 +14,14 @@ export class CadastroClientePage implements OnInit {
     this.router.navigate(['/home']);
   }
 
+  login() {
+    this.router.navigate(['/login-cliente']);
+  }
+
+  home_page_sistema() {
+    this.router.navigate(['/eventos-geral']);
+  }
+
   ngOnInit() {
   }
 

@@ -40,8 +40,9 @@ ion-content{
 				line-height: 25px;
 				font-size: 14px;
 				a{
+					text-decoration: none;
 					.icons_sidemenu{
-						margin-right: 5%;
+						margin-right: 5%;						
 					}
 				}
 			}
@@ -94,15 +95,6 @@ ion-content{
 				ion-icon{
 					background-color: black;
 					border: 1px solid black;
-				}
-				hr{
-
-				}
-				p{
-
-				}
-				p{
-
 				}
 			}
 		}
