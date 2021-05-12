@@ -26,7 +26,6 @@ const routes: Routes = [
   {
     path: 'cadastro-cliente',
     loadChildren: () => import('./pages/cadastro-cliente/cadastro-cliente.module').then( m => m.CadastroClientePageModule)
-<<<<<<< HEAD
   },
   {
     path: 'login-cliente',
@@ -35,11 +34,12 @@ const routes: Routes = [
   {
     path: 'eventos-geral',
     loadChildren: () => import('./pages/eventos-geral/eventos-geral.module').then( m => m.EventosGeralPageModule)
-  },
-=======
+  },  {
+    path: 'eventos-geral-eventos',
+    loadChildren: () => import('./pages/eventos-geral-eventos/eventos-geral-eventos.module').then( m => m.EventosGeralEventosPageModule)
   }
+
 ];
->>>>>>> f0ff2d358e8fbdf3a1a804efae6e1cb9cfa88e4a
 
 @NgModule({
   imports: [
