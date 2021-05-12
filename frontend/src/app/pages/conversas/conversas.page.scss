@@ -1,0 +1,51 @@
+//Fontes
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300;700&display=swap');
+
+ion-content{
+	.side-menu-wrapper{
+		background: linear-gradient(to top,  rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));;
+		padding: 40px 0 0 40px;
+		//position: fixed; 
+		//top: 0;
+		//left: 0; /* Menu posicionado a esquerda */
+		height: 100%;
+		float: left;
+		width: 25%;
+		font: 20px;
+    	font-family: 'Montserrat', sans-serif;
+		display: flex;
+        flex-flow: column;
+		//box-sizing: border-box;
+		ion-item{
+			--background: rgba(255, 255, 255, 0);
+			.titulo_esquerda{
+				font-family: 'Montserrat', sans-serif;
+				color: #F86D70;
+				font-weight: 600;
+				//margin: 2% 0 0 2%;
+				//width: 5%;
+			}
+		}
+		ul{
+			padding: 0;
+			margin: 25% 0 0 0;
+    		overflow-y: auto;/* Rolagem para itens no menu */
+			height: 95%;
+			li{
+				display: block;
+   				padding: 6px 4px 6px 4px;
+    			color: black;
+    			font-weight: 200;
+				text-decoration: none;
+				line-height: 25px;
+				font-size: 14px;
+				a{
+					text-decoration: none;
+					.icons_sidemenu{
+						margin-right: 5%;						
+					}
+				}
+			}
+		}
+	}
+}

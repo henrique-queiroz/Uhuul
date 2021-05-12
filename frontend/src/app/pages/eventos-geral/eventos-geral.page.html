@@ -1,23 +1,75 @@
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
-<ion-header>
-  
-</ion-header>
-
 <ion-content>
-
-  <a href = "home"><img src = "/assets/Uhu!.png" alt = "logo_uhu!"></a>
-
-  <div class = "side-menu-wrapper">
-
+  <div class="side-menu-wrapper">
+    <ion-item>
+      <ion-label class="titulo_esquerda">Uhu!</ion-label>
+    </ion-item>
     <ul>
-      <li><a href = "http://www.google.com" target = "blank" rel = "nofollow">Google</a></li>
-      <li><a href = "https://www.uol.com.br/" target = "blank" rel = "nofollow">UOL</a></li>
-      <li><a href = "http://www.facebook.com" target = "blank" rel = "nofollow">Facebook</a></li>
+      <li><a href="eventos-geral"><ion-icon class="icons_sidemenu" name="home-outline"></ion-icon>Início</a></li>
+      <li><a href="eventos-geral-eventos"><ion-icon class="icons_sidemenu" name="list-outline"></ion-icon>Eventos</a></li>
+      <li><a href="eventos-servicos"><ion-icon class="icons_sidemenu" name="calendar-clear-outline"></ion-icon>Serviços</a></li>
+      <li><a href="notificacoes"><ion-icon class="icons_sidemenu" name="notifications-outline"></ion-icon>Notificações</a></li>
+      <li><a href="conversas"><ion-icon class="icons_sidemenu" name="chatbox-outline"></ion-icon>Conversas</a></li>
+      <li><a href="configuracoes"><ion-icon class="icons_sidemenu" name="cog-outline"></ion-icon>Configurações</a></li>
+      <li><a href="home"><ion-icon class="icons_sidemenu" name="arrow-back-outline"></ion-icon>Sair</a></li>
     </ul>
-
   </div>
 
+  <div class="escolha_eventos">
+    <ion-item lines="none">
+      <ion-label class="titulo_direita">Início</ion-label>
+    </ion-item>
+    <div class="div_opções">
+
+            <ion-card lines="none" class="item_opções" href="https://www.ionicframework.com">
+            <img src="assets/Vector 28.svg">
+            <ion-icon name="create-outline"></ion-icon>
+            <ion-item>
+              <ion-label>Cadastar minha empresa</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Sou fornecedor de serviços e pretendo trabalhar com o Uhu!</ion-label>
+            </ion-item>
+          </ion-card>
+
+            <ion-card lines="none" class="item_opções" href="https://www.ionicframework.com">
+              <img src="assets/Vector 29.svg">
+              <ion-icon name="log-in-outline"></ion-icon>
+              <ion-item>
+                <ion-label>Participar de um evento</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Fui convidado para uma festa e quero reservar meu assento e saber os fornecedores recomendados</ion-label>
+              </ion-item>
+            </ion-card>
+    
+            <ion-card lines="none" class="item_opções" href="https://www.ionicframework.com">
+              <img src="assets/Vector 30.svg">
+              <ion-icon name="file-tray-full-outline"></ion-icon>
+              <ion-item>
+                <ion-label>Procurar fornecedores</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Tenho interesse em conhecer os fornecedores disponiveis para me atender</ion-label>
+              </ion-item>
+            </ion-card>
+ 
+      <!--<ion-item lines="none" class="item_opções"  href="https://www.ionicframework.com">
+        <img class="onda" src="assets/Vector 29.svg">
+        <ion-icon name="log-in-outline"></ion-icon>
+        <hr>
+        <p>Participar de um evento</p>
+        <p>Fui convidado para uma festa e quero reservar meu assento e saber os fornecedores recomendados</p>
+      </ion-item>
+
+      <ion-item lines="none" class="item_opções" href="https://www.ionicframework.com">
+        <img class="onda" src="assets/Vector 30.svg">
+        <ion-icon name="file-tray-full-outline"></ion-icon>
+        <hr>
+        <p>Procurar fornecedores</p>
+        <p>Tenho interesse em conhecer os fornecedores disponiveis para me atender</p>
+      </ion-item>-->
+    </div>
+
+    <div class="div_hr"></div>
+  </div>
 </ion-content>

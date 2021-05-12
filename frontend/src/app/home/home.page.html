@@ -1,28 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      <a href="home"><img src="/assets/Uhu!.png" alt="logo_uhu!"></a>
-    </ion-title>
-    <ion-buttons slot="secondary">
-      <ion-button class="btn_inicio">
-        Início
-      </ion-button>
-      <ion-button class="btn_sobre" href="eventos-geral">
-        Sobre
-      </ion-button>
-      <ion-button class="btn_contato" href="login-cliente">
-        Contato
-      </ion-button>
-    </ion-buttons>
-
-    <ion-buttons slot="primary">
-      <ion-button class="btn_entrar" color="dark" href="cadastro-cliente">
-        Entrar
-      </ion-button>
-      <ion-button class="btn_cconta" color="dark" fill="outline" href="cadastro-fornecedor">
-        Criar Conta
-      </ion-button>
-    </ion-buttons>
+    <div class="menu">
+      <ion-title><img src="/assets/Uhu!.png"></ion-title>
+      <ion-buttons>
+        <ion-button (click)="login_cliente()" class="btn_font espacamento" fill="clear">Entrar</ion-button>
+        <ion-button (click)="cadastro_cliente()" class="btn_font" fill="outline">Criar Conta</ion-button>
+        <ion-button (click)="cadastro_empresa()" class = "btn_font" fill = "outline">Cadastro Empresa</ion-button>
+      </ion-buttons>
+    </div>
   </ion-toolbar>
 
   <!--<ion-toolbar>
@@ -105,8 +90,3 @@
     </div>
   </ion-card>
 </ion-content>
-
-  
-
-
-

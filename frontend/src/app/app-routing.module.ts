@@ -26,7 +26,6 @@ const routes: Routes = [
   {
     path: 'cadastro-cliente',
     loadChildren: () => import('./pages/cadastro-cliente/cadastro-cliente.module').then( m => m.CadastroClientePageModule)
-<<<<<<< HEAD
   },
   {
     path: 'login-cliente',
@@ -36,10 +35,28 @@ const routes: Routes = [
     path: 'eventos-geral',
     loadChildren: () => import('./pages/eventos-geral/eventos-geral.module').then( m => m.EventosGeralPageModule)
   },
-=======
+  {
+    path: 'eventos-geral-eventos',
+    loadChildren: () => import('./pages/eventos-geral-eventos/eventos-geral-eventos.module').then( m => m.EventosGeralEventosPageModule)
+  },
+  {
+    path: 'eventos-servicos',
+    loadChildren: () => import('./pages/eventos-servicos/eventos-servicos.module').then( m => m.EventosServicosPageModule)
+  },
+  {
+    path: 'notificacoes',
+    loadChildren: () => import('./pages/notificacoes/notificacoes.module').then( m => m.NotificacoesPageModule)
+  },
+  {
+    path: 'conversas',
+    loadChildren: () => import('./pages/conversas/conversas.module').then( m => m.ConversasPageModule)
+  },
+  {
+    path: 'configuracoes',
+    loadChildren: () => import('./pages/configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
   }
+
 ];
->>>>>>> f0ff2d358e8fbdf3a1a804efae6e1cb9cfa88e4a
 
 @NgModule({
   imports: [
