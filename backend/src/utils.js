@@ -1,3 +1,5 @@
+const bcrypt = require('bcrypt')
+
 const utils = {
     isEmpty: (str) => !str,
     isOnlyNumber: (str) => !str.match(/[^0-9]/),
@@ -8,6 +10,12 @@ const utils = {
     isSpaced: (str) => str.match(/[ ]/) != null,
     isOnlyLettersAndDashs: (str) => !str.match(/[^0-9- ]/igm),
     isValidGender: (str) => !str.match(/[^mfo ]/igm),
+
+    hashPassword: (password, saltRounds) => {
+        const salt = bcrypt.genSaltSync(saltRounds)
+        const hash = bcrypt.hashSync(password, salt)
+        return hash
+    }
 }
 
 module.exports = utils;
