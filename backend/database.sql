@@ -1,0 +1,124 @@
+DROP DATABASE IF EXISTS uhuu;
+CREATE DATABASE IF NOT EXISTS uhuu;
+
+USE uhuu;
+
+DROP TABLE IF EXISTS contact_type;
+CREATE TABLE IF NOT EXISTS contact_type (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    description VARCHAR(80) NOT NULL
+);
+
+DROP TABLE IF EXISTS contact;
+CREATE TABLE IF NOT EXISTS contact (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    contact_type_id INT UNSIGNED NOT NULL,
+    value VARCHAR(80) NOT NULL,
+    FOREIGN KEY (contact_type_id) REFERENCES contact_type(id)
+);
+
+DROP TABLE IF EXISTS address;
+CREATE TABLE IF NOT EXISTS address (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    city VARCHAR(40) NOT NULL,
+    CEP VARCHAR(11) NOT NULL,
+    street VARCHAR(40) NOT NULL,
+    number VARCHAR(5) NOT NULL,
+    additional_adress VARCHAR(20) NULL,
+    district VARCHAR(40) NOT NULL
+);
+
+DROP TABLE IF EXISTS clients;
+CREATE TABLE IF NOT EXISTS clients (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    address_id INT UNSIGNED NOT NULL,
+    contact_id INT UNSIGNED NOT NULL,
+    cpf VARCHAR(11) UNIQUE NOT NULL,
+    rg VARCHAR(9) UNIQUE NOT NULL,
+    birthdate DATE NOT NULL,
+    username VARCHAR(60) NOT NULL,
+    email VARCHAR(80) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    FOREIGN KEY (contact_id) REFERENCES contact(id),
+    FOREIGN KEY (address_id) REFERENCES address(id)
+);
+
+DROP TABLE IF EXISTS events;
+CREATE TABLE IF NOT EXISTS events (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    client_id INT UNSIGNED NOT NULL,
+    event_date DATE NOT NULL,
+    starting_hour TIME NOT NULL,
+    finishing_hour TIME NOT NULL,
+    FOREIGN KEY (client_id) REFERENCES clients(id)
+);
+
+DROP TABLE IF EXISTS guests;
+CREATE TABLE IF NOT EXISTS guests (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    client_id INT UNSIGNED NOT NULL,
+    event_id INT UNSIGNED NOT NULL,
+    FOREIGN KEY (client_id) REFERENCES clients(id),
+    FOREIGN KEY (event_id) REFERENCES events(id)
+);
+
+DROP TABLE IF EXISTS service_type;
+CREATE TABLE IF NOT EXISTS service_type (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    description VARCHAR(80) NOT NULL
+);
+
+DROP TABLE IF EXISTS providers;
+CREATE TABLE IF NOT EXISTS providers (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    contact_id INT UNSIGNED NOT NULL,
+    service_type_id INT UNSIGNED NOT NULL,
+    name VARCHAR(60) NOT NULL,
+    CNPJ VARCHAR(14) NOT NULL UNIQUE,
+    opening_hour TIME NOT NULL,
+    closing_hour TIME NOT NULL,
+    FOREIGN KEY (contact_id) REFERENCES contact(id),
+    FOREIGN KEY (service_type_id) REFERENCES service_type(id)
+);
+
+DROP TABLE IF EXISTS contracts;
+CREATE TABLE IF NOT EXISTS contracts (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    events_id INT UNSIGNED NOT NULL,
+    client_id INT UNSIGNED NOT NULL,
+    provider_id INT UNSIGNED NOT NULL,
+    event_date DATE NOT NULL,
+    opening_hour TIME NOT NULL,
+    appointment_hour TIME NOT NULL,
+    FOREIGN KEY (events_id) REFERENCES events(id),
+    FOREIGN KEY (client_id) REFERENCES clients(id),
+    FOREIGN KEY (provider_id) REFERENCES providers(id)
+);
+
+DROP TABLE IF EXISTS party_halls;
+CREATE TABLE IF NOT EXISTS party_halls (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    provider_id INT UNSIGNED NOT NULL,
+    tables_qtt INT UNSIGNED NOT NULL,
+    has_external_area ENUM('y', 'n') NOT NULL,
+    maximum_capacity INT UNSIGNED NOT NULL,
+    description TEXT NOT NULL,
+    FOREIGN KEY (provider_id) REFERENCES providers(id)
+);
+
+DROP TABLE IF EXISTS tables;
+CREATE TABLE IF NOT EXISTS tables (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    party_hall_id INT UNSIGNED NOT NULL,
+    chairs_qtt INT UNSIGNED NOT NULL,
+    FOREIGN KEY (party_hall_id) REFERENCES party_halls(id)
+);
+
+DROP TABLE IF EXISTS chairs;
+CREATE TABLE IF NOT EXISTS chairs (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    table_id INT UNSIGNED NOT NULL,
+    client_id INT UNSIGNED NOT NULL,
+    FOREIGN KEY (table_id) REFERENCES tables(id),
+    FOREIGN KEY (client_id) REFERENCES clients(id)
+);
