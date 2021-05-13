@@ -1,134 +1,142 @@
-<ion-header>
-
-  <ion-toolbar>
-
-    <div class = "menu">
-
-      <ion-title><img src="/assets/Uhu!.png"></ion-title>
-
-      <ion-buttons>
-        <ion-button href = "eventos-geral" class="btn_font" fill="outline">Eventos Gerais</ion-button>
-        <ion-button href = "login-cliente" class="btn_font" fill="outline">Login Cliente</ion-button>
-      </ion-buttons>
-
-    </div>
-
-  </ion-toolbar>
-
-</ion-header>
-
 <ion-content>
 
-  <ion-card class = "card_serviço">
-    <h1>Serviços</h1>
-  </ion-card>
-
-  <div class = "tipo_serviço">
-
-    <ion-icon name = "caret-back-outline"></ion-icon>
-
-    <div class = "img01">
-      <img src = "/assets/img01.svg">
-      <p>Barbeiro</p>
-    </div>
-
-    <div class = "p_img">
-      <img src = "/assets/img02.svg">
-      <p>Fotógrafo</p>
-    </div>
-
-    <div class = "p_img">
-      <img src = "/assets/img03.svg">
-      <p>Buffet</p>
-    </div>
-
-    <div class = "p_img">
-      <img src = "/assets/img04.svg">
-      <p>Segurança</p>
-    </div>
-
-    <div class = "p_img">
-      <img src = "/assets/img05.svg">
-      <p>Músicos</p>
-    </div>
-
-    <div class = "p_img">
-      <img src = "/assets/img06.svg">
-      <p>Bartender</p>
-    </div>
-
-    <ion-icon name = "caret-forward-outline"></ion-icon>
-
+  <div class="side-menu-wrapper">
+    <img src="/assets/Uhu!.png">
+    <ul>
+      <li><a href="eventos-geral"><ion-icon class="icons_sidemenu" name="home-outline"></ion-icon>Início</a></li>
+      <li><a href="eventos-geral-eventos"><ion-icon class="icons_sidemenu" name="list-outline"></ion-icon>Eventos</a></li>
+      <li class = "selecao"><a href="eventos-servicos"><ion-icon class="icons_sidemenu" name="calendar-clear-outline"></ion-icon>Serviços</a></li>
+      <li><a href="notificacoes"><ion-icon class="icons_sidemenu" name="notifications-outline"></ion-icon>Notificações</a></li>
+      <li><a href="conversas"><ion-icon class="icons_sidemenu" name="chatbox-outline"></ion-icon>Conversas</a></li>
+      <li><a href="configuracoes"><ion-icon class="icons_sidemenu" name="cog-outline"></ion-icon>Configurações</a></li>
+      <li class="sair"><a href="home"><ion-icon class="icons_sidemenu" name="arrow-back-outline"></ion-icon>Sair</a></li>
+    </ul>
   </div>
 
-  <ion-input type = "text"><ion-icon name = "send-outline"></ion-icon></ion-input>
+  <div class = "div_direita">
 
-  <h5>Resultados da Pesquisa</h5>
+    <div class = "div_item">
+      <ion-item class = "item_servico" lines = "none">
+        <ion-label class = "ion-text-center">Serviços</ion-label>
+      </ion-item>
+    </div>
 
-  <ion-card class = "cards">
-    <ion-card-header>
-      <img src = "/assets/svg01.svg">
-      <ion-card-subtitle>Contrate nosso Barbeiro!</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      R$ 25,00
-    </ion-card-content>
-  </ion-card>
+    <div class = "tipo_serviço">
 
-  <ion-card class = "cards02">
-    <ion-card-header>
-      <img src = "/assets/svg02.svg">
-      <ion-card-subtitle>Contrate nosso Fotógrafo!</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      R$ 2000,00
-    </ion-card-content>
-  </ion-card>
+      <ion-icon name = "caret-back-outline"></ion-icon>
 
-  <ion-card class = "cards02">
-    <ion-card-header>
-      <img src = "/assets/svg03.svg">
-      <ion-card-subtitle>Contrate nosso Buffet!</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      R$ 45,00
-    </ion-card-content>
-  </ion-card>
+      <div class = "p_img">
+        <img src = "/assets/img01.svg">
+        <p>Barbeiro</p>
+      </div>
 
-  <ion-card class = "cards_baixo">
-    <ion-card-header>
-      <img src = "/assets/svg04.svg">
-      <ion-card-subtitle>Contrate nossos Seguranças!</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      R$ 1000,00
-    </ion-card-content>
-  </ion-card>
+      <div class = "p_img">
+        <img src = "/assets/img02.svg">
+        <p>Fotógrafo</p>
+      </div>
 
-  <ion-card class = "cards02_baixo">
-    <ion-card-header>
-      <img src = "/assets/svg05.svg">
-      <ion-card-subtitle>Contrate nossos Músicos!</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      R$ 700,00
-    </ion-card-content>
-  </ion-card>
+      <div class = "p_img">
+        <img src = "/assets/img03.svg">
+        <p>Buffet</p>
+      </div>
 
-  <ion-card class = "cards02_baixo">
-    <ion-card-header>
-      <img src = "/assets/svg06.svg">
-      <ion-card-subtitle>Contrate nosso Bartender!</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      R$ 1500,00
-    </ion-card-content>
-  </ion-card>
+      <div class = "p_img">
+        <img src = "/assets/img04.svg">
+        <p>Segurança</p>
+      </div>
+
+      <div class = "p_img">
+        <img src = "/assets/img05.svg">
+        <p>Músicos</p>
+      </div>
+
+      <div class = "p_img">
+        <img src = "/assets/img06.svg">
+        <p>Bartender</p>
+      </div>
+
+      <ion-icon name = "caret-forward-outline"></ion-icon>
+
+    </div>
+
+    <ion-input type = "text"><ion-icon name = "send-outline"></ion-icon></ion-input>
+
+    <!--<h5>Resultados da Pesquisa</h5>-->
+
+      <div class = "div_cards">
+
+          <ion-card class = "cards02">
+            <ion-card-header>
+              <img src = "/assets/svg01.svg">
+              <ion-card-subtitle>Contrate nosso Barbeiro!</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+              R$ 25,00
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class = "cards02">
+            <ion-card-header>
+              <img src = "/assets/svg02.svg">
+              <ion-card-subtitle>Contrate nosso Fotógrafo!</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+              R$ 2000,00
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card class = "cards02">
+            <ion-card-header>
+              <img src = "/assets/svg03.svg">
+              <ion-card-subtitle>Contrate nosso Buffet!</ion-card-subtitle>
+            </ion-card-header>
+        
+          <ion-card-content>
+            R$ 45,00
+          </ion-card-content>
+        </ion-card>
+
+      </div>
+
+      <div class = "div_cards">
+
+        <ion-card class = "cards02">
+          <ion-card-header>
+            <img src = "/assets/svg04.svg">
+            <ion-card-subtitle>Contrate nossos Seguranças!</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            R$ 1000,00
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class = "cards02">
+          <ion-card-header>
+            <img src = "/assets/svg05.svg">
+            <ion-card-subtitle>Contrate nossos Músicos!</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            R$ 700,00
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class = "cards02">
+          <ion-card-header>
+            <img src = "/assets/svg06.svg">
+            <ion-card-subtitle>Contrate nosso Bartender!</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            R$ 1500,00
+          </ion-card-content>
+        </ion-card>
+
+      </div>
+
+  </div>
 
 </ion-content>

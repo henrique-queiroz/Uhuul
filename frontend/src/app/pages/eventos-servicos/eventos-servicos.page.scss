@@ -52,196 +52,267 @@ ion-header{
     }
 }
 ion-content{
-    .card_serviço{
-        --background: linear-gradient(to right, rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        height: 35%;
-      
-        h1{
-            padding: 0%;
-            margin: 5% 0 0 0;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-            color: black;
-            text-align: center;
-        }
-    }
-    .tipo_serviço{
-        margin: 50px 0 0 0;
-        max-width: 100%;
-        height: 200px;
-        border: 1px solid black;
+    display: flex;
+	.side-menu-wrapper{
+		background: linear-gradient(to top,  rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));
+		width: 20%;
+		float: left;
+    	font-family: 'Montserrat', sans-serif;
+        height: 190%;
+		img{
+			margin-top: 50px;
+			margin-left: 10%;
+			width: 35%;
+		}
+		ul{
+			padding: 0;
+			margin-top: 10%;
+			li{
+   				padding: 6px 4px;
+    			font-weight: 200;
+				line-height: 20px;
+				font-size: 14px;
+				padding-left: 10%;
+				
+				a{
+					text-decoration: none;
+					color: black;
+					.icons_sidemenu{
+						margin-right: 5%;					
+					}
+				}
+			}
+            .selecao{
+                background-color: rgba(255,255,255,0.5);
+            }
+			.sair{
+				margin-top: 20px;
+			}
+		}
+	}   
+    .div_direita{
+        width: 80%;
+        float: left;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .div_item{
+            width: 20%;
+            height: 40%;
+            margin-top: 70px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
 
-        ion-icon{
-            margin: 75px 0 50px 42px;
-            color: black;
-            font-size: 40px;
-            float: left;
-        }
-        .img01{
-            float: left;
-            width: 130px;
-            border: 1px solid black;
-            margin: 8px 0 0 3%;
-            text-align: center;
-            font-family: 'Dancing Script';
-            font-weight: bold;
-            font-size: 25px;
-            p{
-                margin-top: 0%;
+            .item_servico{
+                ion-label{
+                    color: black;
+                    font-size: 40px;
+                    font-family: 'Dancing Script';
+                }
+                //margin-top: 200px;
+                //margin-bottom: 200px;
+                display: flex;
+                align-items: center;
+            }
+        }   
+    
+        .tipo_serviço{
+            //margin: 70px 0 0 70px;
+            width: 80%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+
+            ion-icon{
+                //margin: 75px 0 50px 42px;
+                margin-top: 0;
+                color: black;
+                font-size: 40px;
+                //float: left;
+            }
+            .img01{
+                float: left;
+                width: 130px;
+                //margin: 8px 0 0 7%;
                 text-align: center;
                 font-family: 'Dancing Script';
                 font-weight: bold;
                 font-size: 25px;
+                border: 1px solid black;
+                p{
+                    margin-top: 0%;
+                    text-align: center;
+                    font-family: 'Dancing Script';
+                    font-weight: bold;
+                    font-size: 25px;
+                }
+            }
+            .p_img{
+                //float: left;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    width: 80%;
+                }
+                //margin: 8px 0 0 5%;
+                p{
+                    margin-top: 0%;
+                    text-align: center;
+                    font-family: 'Dancing Script';
+                    font-weight: bold;
+                    font-size: 25px;
+                }
+            }
+            img{
+                width: 130px;
+                margin: 0;
             }
         }
-        .p_img{
-            float: left;
-            border: 1px solid black;
-            margin: 8px 0 0 5%;
-            p{
-                margin-top: 0%;
-                text-align: center;
-                font-family: 'Dancing Script';
-                font-weight: bold;
-                font-size: 25px;
-            }
-        }
-        img{
-            width: 130px;
-            margin: 0;
-        }
-    }
-    ion-input{
-        --placeholder-font-family: 'Montserrat';
-        font-size: 14px;
-        --placeholder-color: black;
-        --placeholder-opacity: 0.7;
-        border: solid black 1px;
-        --padding-bottom: 12px;
-        --padding-start: 15px;
-        --padding-top: 12px;
-        margin: 3% 0 15px 35%;
-        border-radius: 50px;
-        width: 30%;
+        ion-input{
+            --placeholder-font-family: 'Montserrat';
+            font-size: 14px;
+            --placeholder-color: black;
+            --placeholder-opacity: 0.7;
+            border: solid black 1px;
+            --padding-bottom: 12px;
+            --padding-start: 15px;
+            --padding-top: 12px;
+            margin-top: 3%;
+            border-radius: 50px;
+            width: 50%;
 
-        ion-icon{
-            margin-left: 10px;
+            ion-icon{
+                margin-left: 10px;
+            }
         }
-    }
-    h5{
-        margin: 5% 0 0 15%;
-        font-family: 'Montserrat', sans-serif;
-        text-decoration: underline
-    }
-    .cards{
-        width: 15%;
-        height: 60%;
-        background: #F0F0F0;
-        margin: 5% 0 0 15%;
-        float: left;
-        img{
-            width: 80%;
-            margin: 10% 0 0 10%;
-        }
-        ion-card-subtitle{
-            margin-top: 15%;
-            text-align: center;
-            font-family: 'Dancing Script';
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-        }
-        ion-card-content{
-            margin-top: 5%;
-            text-align: center;
+        h5{
+            //margin: 5% 0 0 15%;
             font-family: 'Montserrat', sans-serif;
-            font-size: 30px;
-            font-weight: 400;
-            color: black;
+            text-decoration: underline
         }
-    }
-    .cards02{
-        width: 15%;
-        height: 60%;
-        background: #F0F0F0;
-        margin: 5% 0 0 12%;
-        float: left;
-        img{
+        .div_cards{
+            display: flex;
             width: 80%;
-            margin: 10% 0 0 10%;
-        }
-        ion-card-subtitle{
-            margin-top: 15%;
-            text-align: center;
-            font-family: 'Dancing Script';
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-        }
-        ion-card-content{
-            margin-top: 5%;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 30px;
-            font-weight: 400;
-            color: black;
-        }
-    }
-    .cards_baixo{
-        width: 15%;
-        height: 60%;
-        background: #F0F0F0;
-        margin: 5% 0 0 15%;
-        float: left;
-        img{
-            width: 80%;
-            margin: 10% 0 0 10%;
-        }
-        ion-card-subtitle{
-            margin-top: 15%;
-            text-align: center;
-            font-family: 'Dancing Script';
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-        }
-        ion-card-content{
-            margin-top: 5%;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 30px;
-            font-weight: 400;
-            color: black;
-        }
-    }
-    .cards02_baixo{
-        width: 15%;
-        height: 60%;
-        background: #F0F0F0;
-        margin: 5% 0 0 12%;
-        float: left;
-        img{
-            width: 80%;
-            margin: 10% 0 10px 10%;
-        }
-        ion-card-subtitle{
-            margin-top: 15%;
-            text-align: center;
-            font-family: 'Dancing Script';
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-        }
-        ion-card-content{
-            margin-top: 5%;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 30px;
-            font-weight: 400;
-            color: black;
+            align-items: center;
+            
+            .cards{
+                width: 15%;
+                height: 60%;
+                background: #F0F0F0;
+                //margin: 5% 0 0 15%;
+                //float: left;
+                img{
+                    width: 80%;
+                    margin: 10% 0 0 10%;
+                }
+                ion-card-subtitle{
+                    margin-top: 15%;
+                    text-align: center;
+                    font-family: 'Dancing Script';
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: black;
+                }
+                ion-card-content{
+                    margin-top: 5%;
+                    text-align: center;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 30px;
+                    font-weight: 400;
+                    color: black;
+                }
+            }
+            .cards02{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 25%;
+                height: 80%;
+                background: #F0F0F0;
+                margin: 5% 5%;
+                //float: left;
+                padding: 0;
+                img{
+                    width: 80%;
+                    margin: 10% 0 0 10%;
+                }
+                ion-card-subtitle{
+                    margin-top: 15%;
+                    text-align: center;
+                    font-family: 'Dancing Script';
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: black;
+                }
+                ion-card-content{
+                    margin-top: 5%;
+                    text-align: center;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 25px;
+                    font-weight: 400;
+                    color: black;
+                }
+            }
+            .cards_baixo{
+                width: 15%;
+                height: 60%;
+                background: #F0F0F0;
+                //margin: 5% 0 0 15%;
+                //float: left;
+                border: 1px solid black;
+                img{
+                    width: 80%;
+                    margin: 10% 0 0 10%;
+                }
+                ion-card-subtitle{
+                    margin-top: 15%;
+                    text-align: center;
+                    font-family: 'Dancing Script';
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: black;
+                }
+                ion-card-content{
+                    margin-top: 5%;
+                    text-align: center;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 30px;
+                    font-weight: 400;
+                    color: black;
+                }
+            }
+            .cards02_baixo{
+                width: 15%;
+                height: 60%;
+                background: #F0F0F0;
+                //margin: 5% 0 0 12%;
+                //float: left;
+                border: 1px solid black;
+                img{
+                    width: 80%;
+                    margin: 10% 0 10px 10%;
+                }
+                ion-card-subtitle{
+                    margin-top: 15%;
+                    text-align: center;
+                    font-family: 'Dancing Script';
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: black;
+                }
+                ion-card-content{
+                    margin-top: 5%;
+                    text-align: center;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 30px;
+                    font-weight: 400;
+                    color: black;
+                }
+            }
         }
     }
 }
