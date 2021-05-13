@@ -2,262 +2,199 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300;700&display=swap');
 
 ion-content{
+	display: flex;
 	.side-menu-wrapper{
-		background: linear-gradient(to top,  rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));;
-		padding: 40px 0 0 40px;
-		//position: fixed; 
-		//top: 0;
-		//left: 0; /* Menu posicionado a esquerda */
-		height: 100%;
+		background: linear-gradient(to top,  rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));
+		width: 25%;
 		float: left;
-		width: 20%;
-		font: 20px;
     	font-family: 'Montserrat', sans-serif;
-		display: flex;
-        flex-flow: column;
-		//box-sizing: border-box;
+        height: 100%;
 		img{
-			margin: 2% 0 0 2%;
+			margin-top: 50px;
+			margin-left: 10%;
 			width: 35%;
-		}
-		ion-item{
-			--background: rgba(255, 255, 255, 0);
 		}
 		ul{
 			padding: 0;
-			margin: 10% 0 0 0;
-    		overflow-y: auto; /* Rolagem para itens no menu */
-			height: 95%;
+			margin-top: 10%;
 			li{
-				display: block;
-   				padding: 6px 4px 6px 4px;
-    			color: black;
+   				padding: 6px 4px;
     			font-weight: 200;
-				text-decoration: none;
-				line-height: 25px;
+				line-height: 20px;
 				font-size: 14px;
+				padding-left: 10%;
+				background-color: rgba(255,255,255,0.5);
 				a{
 					text-decoration: none;
+					color: black;
 					.icons_sidemenu{
-						margin-right: 5%;						
+						margin-right: 5%;					
 					}
 				}
 			}
+			.sair{
+				margin-top: 20px;
+			}
 		}
 	}
-	.escolha_eventos{
+	.direita{
+		width: 75%;
+		height: 100%;
+		float: right;
+		.escolha_eventos{
+			display: flex;
+			flex-direction: column;
+			box-shadow: 0 0 1em rgb(207, 207, 207);
+    		border: 0.5px solid rgb(255, 255, 255);
+			margin: 100px 5% 0 5%;
+			padding: 15px 30px;
+			ion-item{
+				.titulo_direita{
+					font-family: 'Montserrat';
+					font-weight: 600;
+					font-size: 20px;
+					color: black;
+					margin-top: 30px;
+					border-bottom: 1px solid #F86D70; 
+					border-bottom-width: 3px;
+				}
+			}
+			.div_opções{
+				display: flex;
+				overflow-x: scroll;
+				.item_opções{
+					min-width: 310px;
+					min-height: 260px;
+					margin-left: 2%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					img{
+						margin-top: 5px;
+						
+					}
+					.icon_azul{
+						color: #6DC3F8;
+						//margin: 0 0 0 120px;
+						font-size: 70px;
+					}
+					.icon_amarelo{
+						color: #F8E16D;
+						font-size: 70px;
+					}
+					.icon_verde{
+						color: #9BF86D;
+						font-size: 70px;
+					}
+					.icon_azul, .icon_amarelo, .icon_verde{
+						margin: 0 auto;
+					}
+					ion-item{
+						.título_label{
+							margin: 0 0 0 0;
+							font-family: 'Montserrat', sans-serif;
+							font-weight: bold;
+						}
+					}
+					ion-item{
+						p{
+							font-family: 'Montserrat', sans-serif;
+							font-size: 11px;
+						}
+					}
+				}
+			}
+			.div_hr{
+				margin-top: 30px;
+				height: 5px;
+				width: 94%;
+				background: red;
+			}
+		}
+	}
+}
+
+/*ion-content{
+	.direita{
 		width: 75%;
 		height: 70%;
 		float: right;
-		background-color: white;
-		box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
-    	border: 0.5px solid rgba(255, 255, 255, 0.77);
-		display: flex;
-        flex-flow: column;
-		margin: 100px 30px 0 0px;
-		ion-item{
-			.titulo_direita{
-				font-family: 'Montserrat', sans-serif;
-				color: black;
-				font-weight: 600;
-				margin: 2% 0 0 7%;
-				width: 8%;
-				border: 1px solid #F86D70;
-				border-bottom-width: 3px;
-				border-top-color: white;
-				border-right-color: white;
-				border-left-color: white;
-			}
-		}
-		.div_opções{
-			margin: 0% 3% 0 0;
-			height: 100px;
-			border: 1px solid black;
-			.item_opções{
-				width: 310px;
-				//--padding-start: 0;
-				//--inner-padding-bottom: 0;
-				//--inner-padding-end:0;
-				//--inner-padding-start:0;
-				//--inner-padding-top:0;
-				margin: 5% 0 0 19px;
-				//--background: lightgray;
-				float: left;
-				//box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
-    			//border: 0.5px solid rgba(255, 255, 255, 0.77);
-        		//flex-flow: column;
-				//height: 100%;
-				--min-height: 261px;
-				.onda{
-					width: 313px;
-					margin: 2px 0 0 0;
-					padding: 0;
-					//border: 1px solid black;
-				}
-				.icon_azul{
-					color: #6DC3F8;
-					margin: 0 0 0 120px;
-					font-size: 70px;
-					display: block;
-				}
-				.icon_amarelo{
-					color: #F8E16D;
-					margin: 0 0 0 120px;
-					font-size: 70px;
-					display: block;
-				}
-				.icon_verde{
-					color: #9BF86D;
-					margin: 0 0 0 120px;
-					font-size: 70px;
-					display: block;
-				}
-				hr{
-					color: blue;
-					size: 100px;
-				}
-				ion-item{
-					.título_label{
-						margin: 0 0 0 0;
-						font-family: 'Montserrat', sans-serif;
-						font-weight: bold;
-					}
-					p{
-						font-family: 'Montserrat', sans-serif;
-						font-size: 11px;
-					}
-				}
-				p{
-
-				}
-				p{
-
+		.escolha_eventos{
+			height: 700px;
+			//background-color: white;
+			box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
+    		border: 0.5px solid rgba(255, 255, 255, 0.77);
+			//display: flex;
+        	//flex-flow: column;
+			margin: 100px 30px 0 0px;
+			ion-item{
+				.titulo_direita{
+					font-family: 'Montserrat', sans-serif;
+					color: black;
+					font-weight: 600;
+					margin: 2% 0 0 5%;
+					width: 8%;
+					border: 1px solid #F86D70;
+					border-bottom-width: 3px;
+					border-top-color: white;
+					border-right-color: white;
+					border-left-color: white;
 				}
 			}
-		}
-		.div_hr{
-			margin: 300px 3% 0 3%;
-			height: 1%;
-			width: 94%;
-			background: red;
-		}
-	}
-}
-
-/*h3{
-	font-family: 'Montserrat', sans-serif;
-	color: #F86D70;
-	font-weight: 600;
-	margin: 2% 0 0 2%;
-	width: 5%;
-}
-h1{
-	font-family: 'Montserrat', sans-serif;
-	color: black;
-	font-weight: 600;
-	margin: 2% 0 0 7%;
-	width: 8%;
-	border: 1px solid #F86D70;
-	border-bottom-width: 3px;
-	border-top-color: white;
-	border-right-color: white;
-	border-left-color: white;
-}
-.side-menu-wrapper {
-	background: linear-gradient(to top,  rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));;
-	padding: 40px 0 0 40px;
-	position: fixed; 
-	top: 0;
-	left: 0;*/ /* Menu posicionado a esquerda */
-	/*height: 100%;
-	width: 250px;
-	font: 20px;
-    font-family: 'Montserrat', sans-serif;
-	box-sizing: border-box;
-}
-.side-menu-wrapper ul{ *//* CSS ul list style */
-	/*padding: 0;
-	margin: 25% 0 0 0;
-    overflow-y: auto; *//* Rolagem para itens no menu */
-	/*height: 95%;
-}
-.side-menu-wrapper ul li a {*/ /* Links */
-    /*display: block;
-    padding: 6px 4px 6px 4px;
-    color: black;
-    font-weight: 200;
-	text-decoration: none;
-	line-height: 25px;
-	font-size: 14px;
-}
-.icons_sidemenu{
-	margin-right: 5%;
-}
-.escolha_eventos{
-	width: 1065px;
-	height: 444px;
-	float: right;
-	background-color: white;
-	box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
-    border: 0.5px solid rgba(255, 255, 255, 0.77);
-	margin: 32px 26px 0 26px;
-
-	.div_hr{
-		margin: 350px 0 0 3%;
-		height: 1%;
-		width: 94.5%;
-		background: red;
-	}
-	.div_opções{
-		margin: 5% 0 0 3%;
-
-		.item_azul{
-			width: 313px;
-			padding: 0;
-			background-color: white;
-			float: left;
-			box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
-    		border: 0.5px solid rgba(255, 255, 255, 0.77);
-			display: flex;
-        	flex-flow: column;
-			height: 100%;
-			--min-height: 264px;
-		}
-		.item_amarela{
-			width: 313px;
-			height: 264px;
-			margin-left: 3%;
-			background-color: white;
-			float: left;
-			box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
-    		border: 0.5px solid rgba(255, 255, 255, 0.77);
-			display: flex;
-        	flex-flow: column;
-			height: 100%;
-			--min-height: 264px;
-		}
-		.item_verde{
-			width: 313px;
-			height: 264px;
-			margin-left: 3%;
-			background-color: white;
-			float: left;
-			box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
-    		border: 0.5px solid rgba(255, 255, 255, 0.77);
-			display: flex;
-        	flex-flow: column;
-			height: 100%;
-			--min-height: 264px;
-		}
-		.onda_azul{
-			width: 313px;
-			margin: -79% 0 0 0;
-			padding: 0;
-			border: 1px solid black;
-		}
-		.icon_cad_empresa{
-			background-color: black;
-			border: 1px solid black;
+			.div_opções{
+				//margin: 0% 3% 0 0;
+				//height: 100px;
+				border: 1px solid black;
+				.item_opções{
+					width: 310px;
+					float: left;
+					--min-height: 261px;
+					.onda{
+						width: 313px;
+						margin: 2px 0 0 0;
+						padding: 0;
+					}
+					.icon_azul{
+						color: #6DC3F8;
+						margin: 0 0 0 120px;
+						font-size: 70px;
+						display: block;
+					}
+					.icon_amarelo{
+						color: #F8E16D;
+						margin: 0 0 0 120px;
+						font-size: 70px;
+						display: block;
+					}
+					.icon_verde{
+						color: #9BF86D;
+						margin: 0 0 0 120px;
+						font-size: 70px;
+						display: block;
+					}
+					hr{
+						color: blue;
+						size: 100px;
+					}
+					ion-item{
+						.título_label{
+							margin: 0 0 0 0;
+							font-family: 'Montserrat', sans-serif;
+							font-weight: bold;
+						}
+						p{
+							font-family: 'Montserrat', sans-serif;
+							font-size: 11px;
+						}
+					}
+				}
+			}
+			.div_hr{
+				margin: 300px 3% 0 3%;
+				height: 1%;
+				width: 94%;
+				background: red;
+			}
 		}
 	}
 }*/

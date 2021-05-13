@@ -1,116 +1,136 @@
 //Fontes
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300;700&display=swap');
 
-*{
-    font-family: 'Montserrat';
-}
 ion-content{
-    .div_esquerda{
-        width: 100%;
-        max-width: 520px;
-        background: linear-gradient(to top left, rgb(32, 19, 19), rgb(16, 10, 10));
-        margin: none;
-        padding: none;
-        float: left;
+    #Cadastro_Cliente{
         display: flex;
-        flex-flow: column;
+        flex-direction: row;
+        width: 100%;
         height: 100%;
-        color: white;
-
-        .centro_esquerda{
-            margin: auto auto;
+        .div_esquerda{
+            background: linear-gradient(to top left, rgb(32, 19, 19), rgb(16, 10, 10));
+            width: 35.4%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             ion-item{
                 --background: rgba(255, 255, 255, 0);
                 color: white;
-                
                 .titulo_esquerda{
                     font-family: 'Dancing Script';
-                    font-size: 38px;
-                    margin: auto auto;
+                    font-size: max(40px, 1vw);
+                    margin-bottom: 56px;
                 }
             }
+            .item_inicial{
+                margin-top: auto;
+            }
             img{
-                width: 100%;
-                max-width: 500px;
-                height: 100%;
-                max-height: 350px;
+                width: 80%;
             }
             ion-item{
                 .text_esquerda{
                     font-family: 'Montserrat';
-                    font-size: 16px;
+                    font-size: max(15px,1vw);
+                    margin-top: 71px;
+                    margin-bottom: 20px;
                 }
             }
-            ion-button{
+            .btn_entrar{
                 color:#F86D70;
                 font-weight: bold;
                 --border-color: #F86D70;
                 --border-radius: 0;
-                --padding-bottom: 20px;
-                --padding-end: 60px;
-                --padding-start: 60px;
-                --padding-top: 20px;
-                margin: 0 26.5%
+                --border-width: 3px;
+                --padding-bottom: 10px;
+                --padding-end: 46px;
+                --padding-start: 46px;
+                --padding-top: 10px;
+                margin-bottom: auto;
+            }
+        }
+        .div_direita{
+            width: 64.6%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .secao_btn{
+                margin: auto 0;
+                display: flex;
+                .arrow-back{
+                    color: black;
+                    padding-top: 4%;
+                    font-size: max(20px, 1vw);
+                }
+                .agrupamento_cadastro{
+                    display: block;
+                    .centro_direita{
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 48%;
+                        ion-item{
+                            .criar_conta{
+                                font-family: 'Montserrat';
+                                font-weight: bold;
+                                font-size: max(32px, 1vw);
+                            }
+                        }
+                        ion-item{
+                            .text_direita{
+                                font-family: 'Montserrat';
+                                font-weight: bold;
+                                font-size: max(11px, 1vw);
+                            }
+                        }
+                        ion-input{
+                            font-family: 'Montserrat';
+                            font-size: max(13px, 1vw);
+                            --placeholder-color: black;
+                            --placeholder-opacity: 1;
+                            border: solid #EEE7E7 1px;
+                            //--padding-bottom: 20px;
+                            //--padding-end: 60px;
+                            //--padding-start: 60px;
+                            //--padding-top: 20px;
+                            width: 200%;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .btn_cadastrar{
+                        font-family: 'Montserrat';
+                        font-weight: bold;
+                        color:#A26DF8;
+                        --border-color: #A26DF8;
+                        --border-radius: 0;
+                        --border-width: 3px;
+                        --padding-bottom: 30px;
+                        --padding-end: 94px;
+                        --padding-start: 94px;
+                        --padding-top: 30px;
+                    }
+                }
             }
         }
     }
-    .div_direita{
-        width: 60%;
-        float: right;
-        margin: none;
-        padding: none;
-        display: flex;
-        flex-flow: column;
-        height: 100%;
-        //box-shadow: 0 0 1em rgba(207, 207, 207, 0.77);
-        .centro_direita{
-            margin: auto auto;
-            width: 60%;
+}
 
-            ion-item{
-                .arrow-back{
-                    width: 40px;
-                    font-size: 30px;
-                    color: black;
-                    //--background: black;
-                    --border-radius: 0;
-                    --padding-bottom: 0px;
-                    --padding-end: 0px;
-                    --padding-start: 0px;
-                    --padding-top: 0px;
-                }
-                .criar_conta{
-                    font-family: 'Montserrat';
-                    font-weight: bold;
-                    font-size: 32px;
-                }
+@media (max-width: 710px){
+    ion-content{
+        #Cadastro_Cliente{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+            .div_esquerda{
+                display: none;
             }
-            ion-item{
-                .text_direita{
-                    font-family: 'Montserrat';
-                    font-weight: bold;
-                    font-size: 12px;
-                }
+            .div_direita{
+                width: 100%;
             }
-            ion-input{
-                --placeholder-color: black;
-                --placeholder-opacity: 1;
-                border: solid #EEE7E7 1px;
-                --padding-bottom: 12px;
-                --padding-start: 15px;
-                --padding-top: 12px;
-                margin-bottom: 20px;
-            }
-            ion-button{
-                font-family: 'Montserrat';
-                color:#A26DF8;
-                --border-color: #A26DF8;
-                --border-radius: 0;
-                --padding-bottom: 20px;
-                --padding-end: 94px;
-                --padding-start: 94px;
-                --padding-top: 20px;
-            }
-        }
+        }   
     }
 }

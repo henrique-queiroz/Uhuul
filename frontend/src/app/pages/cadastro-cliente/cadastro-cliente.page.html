@@ -1,4 +1,44 @@
 <ion-content>
+  <div id="Cadastro_Cliente">
+    <div class="div_esquerda">
+      <ion-item class="item_inicial" lines="none">
+        <ion-label class="titulo_esquerda">Quase pronto</ion-label>
+      </ion-item>
+      
+      <img src="/assets/svg_cadastro.svg">
+
+      <ion-item lines="none">
+        <ion-label class="text_esquerda">Já possui uma conta?</ion-label>
+      </ion-item>
+
+      <ion-button class="btn_entrar" fill="outline" (click)="login()">Entrar</ion-button>
+    </div>
+    <div class="div_direita">
+      <div class="secao_btn">
+        <ion-button class="arrow-back" fill="clear" (click)="home()"><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
+        <div class="agrupamento_cadastro">
+          <div class="centro_direita">
+            <ion-item lines="none">
+              <ion-label class="criar_conta">Criar nova conta</ion-label>
+            </ion-item>
+    
+           <ion-item lines="none">
+              <ion-label class="text_direita">Preencha só mais alguns dados para continuar</ion-label>
+           </ion-item>
+    
+            <ion-input type="text" placeholder="Nome"></ion-input>
+            <ion-input type="tel" placeholder="Número de celular"></ion-input>
+            <ion-input type="text" placeholder="Data de nascimento"></ion-input>
+          </div>
+          <ion-button class="btn_cadastrar" fill="outline" (click)="home_page_sistema()">Concluir cadastro</ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+
+<!--<ion-content>
   <div class="div_esquerda">
     <div class="centro_esquerda">
       <ion-item lines="none">
@@ -14,7 +54,7 @@
     </div>
   </div>
 
-  <div class="div_direita">l
+  <div class="div_direita">
     <div class="centro_direita">
       <ion-item lines="none">
         <ion-button class="arrow-back" fill="clear" (click)="home()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
@@ -30,4 +70,4 @@
       <ion-button fill="outline" (click)="home_page_sistema()">Concluir cadastro</ion-button>
     </div>
   </div>
-</ion-content>
+</ion-content>-->
