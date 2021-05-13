@@ -1,41 +1,44 @@
 const utils = require('../utils')
 
-const Client = require('../models/Client')
+const Provider = require('../models/Provider')
 const Address = require('../models/Address')
 const Contact = require('../models/Contact')
 const jwt = require('jsonwebtoken')
 
-class ClientController {
+class ProviderController {
 
     async create(req, res) {
 
         const data = { ...req.body }
 
-        const userExists = await Client.userExists(data.user.cpf, data.user.rg, data.user.email)
+        const userExists = await Provider.userExists(data.provider.cnpj)
 
         if (!userExists) {
 
             const address = await Address.create(data.address)
+            console.log(address);
             const contact = await Contact.create(data.contact)
+            console.log(contact);
 
-            const clientInsertData = {
-                ...data.user,
-                address_id: address.lastId[0],
+            const providerInsertData = {
+                ...data.provider,
                 contact_id: contact.lastId[0],
-                password: utils.hashPassword(data.user.password)
+                password: utils.hashPassword(data.provider.password)
             }
 
-            const clientInsertResult = await Client.create(clientInsertData)
+            console.log(providerInsertData)
 
-            if (clientInsertResult.status) {
+            const providerInsertResult = await Provider.create(providerInsertData)
+
+            if (providerInsertResult.status) {
 
                 res.statusCode = 201
-                res.json(clientInsertResult);
+                res.json(providerInsertResult);
 
             } else {
 
                 res.statusCode = 400
-                res.json(clientInsertResult)
+                res.json(providerInsertResult)
 
             }
 
@@ -53,7 +56,7 @@ class ClientController {
 
     async getAll(req, res) {
         try {
-            const result = await Client.getAll();
+            const result = await Provider.getAll();
 
             if (result.data.length > 0) {
                 res.statusCode = 200
@@ -81,19 +84,19 @@ class ClientController {
     async delete(req, res) {
         try {
             const id = req.params.id
-            const result = await Client.delete(id)
+            const result = await Provider.delete(id)
 
             if (result.status) {
                 res.statusCode = 200
                 res.json({
                     status: true,
-                    msg: 'Cliente excluído com sucesso'
+                    msg: 'Fornecedor excluído com sucesso'
                 })
             } else {
                 res.statusCode = 400
                 res.json({
                     status: false,
-                    msg: 'Não foi possível exluir cliente'
+                    msg: 'Não foi possível exluir fornecedor'
                 })
             }
         } catch (error) {
@@ -104,14 +107,14 @@ class ClientController {
     async login(req, res) {
         try {
             const { email, password } = req.body
-            const result = await Client.findEmail(email)
+            const result = await Provider.findEmail(email)
             if (result.length > 0) {
                 const correctPassword = await utils.comparePasswords(password, result[0].password)
                 if (correctPassword) {
                     const token = jwt.sign(
                         {
                             userId: result[0].id,
-                            email: result[0].email
+                            nome: result[0].nome
                         },
                         process.env.JWT_key,
                         {
@@ -136,7 +139,7 @@ class ClientController {
                 res.statusCode = 401
                 res.json({
                     status: false,
-                    msg: 'Email ou senha incorretos'
+                    msg: 'Usuário ou senha incorretos'
                 })
             }
         } catch (error) {
@@ -146,4 +149,4 @@ class ClientController {
 
 }
 
-module.exports = new ClientController()
+module.exports = new ProviderController()
