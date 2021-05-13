@@ -64,13 +64,15 @@ DROP TABLE IF EXISTS providers;
 CREATE TABLE IF NOT EXISTS providers (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     contact_id INT UNSIGNED NOT NULL,
-    service_type_id INT UNSIGNED NOT NULL,
+    address_id INT UNSIGNED NOT NULL,
     name VARCHAR(60) NOT NULL,
     CNPJ VARCHAR(14) NOT NULL UNIQUE,
+    email VARCHAR(80) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
     opening_hour TIME NOT NULL,
     closing_hour TIME NOT NULL,
     FOREIGN KEY (contact_id) REFERENCES contact(id),
-    FOREIGN KEY (service_type_id) REFERENCES service_type(id)
+    FOREIGN KEY (address_id) REFERENCES address(id)
 );
 
 DROP TABLE IF EXISTS contracts;
