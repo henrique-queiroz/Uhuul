@@ -1,15 +1,22 @@
 const express = require('express')
-const app = express()
+const login = require('./middleware/login')
 
 const router = express.Router()
 
 // Controllers
 const Client = require('./controllers/ClientController')
+const Provider = require('./controllers/ProviderController')
 
-router.get('/client', Client.getAll)
+router.get('/client', login, Client.getAll)
 router.post('/client', Client.create)
-router.delete('/client/:id', Client.delete)
+router.delete('/client/:id', login, Client.delete)
+router.post('/client/auth', Client.login)
 
-console.log(Client.logName);
+
+router.get('/provider', login, Provider.getAll)
+router.post('/provider', Provider.create)
+router.delete('/provider/:id', login, Provider.delete)
+router.post('/provider/auth', Provider.login)
+
 
 module.exports = router

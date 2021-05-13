@@ -20,7 +20,7 @@ class Client {
 
       const client = await database('clients').where({ cpf, rg, email }).select('id')
 
-      if(client.length > 0) return true
+      if (client.length > 0) return true
 
       return false
 
@@ -66,6 +66,15 @@ class Client {
       return { status: true, msg: 'Exclusão feita' }
     } catch (error) {
       return { status: false, msg: 'Exclusão não pode ser feita', error }
+    }
+  }
+
+  async findEmail(email) {
+    try {
+      const result = await database.select('email', 'password').where({email}).table('clients')
+      return result;
+    } catch (error) {
+      return { status: false, msg: 'A procura não pôde ser feita', error }
     }
   }
 
