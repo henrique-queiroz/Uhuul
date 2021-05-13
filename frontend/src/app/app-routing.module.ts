@@ -54,7 +54,11 @@ const routes: Routes = [
   {
     path: 'configuracoes',
     loadChildren: () => import('./pages/configuracoes/configuracoes.module').then( m => m.ConfiguracoesPageModule)
+  },  {
+    path: 'adm-page',
+    loadChildren: () => import('./pages/adm-page/adm-page.module').then( m => m.AdmPagePageModule)
   }
+
 
 ];
 
