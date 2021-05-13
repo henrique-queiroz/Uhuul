@@ -15,6 +15,11 @@ const utils = {
         const salt = bcrypt.genSaltSync(saltRounds)
         const hash = bcrypt.hashSync(password, salt)
         return hash
+    },
+
+    comparePasswords: async (inputPassword, hashedPassword) => {
+        const result = await bcrypt.compare(inputPassword, hashedPassword)
+        return result
     }
 }
 
