@@ -23,6 +23,10 @@ export class HomePage {
 
   constructor(private router: Router) { }
 
+  login_cliente() {
+    this.router.navigate(['/login-cliente']);
+  }
+
   cadastro_cliente() {
     this.router.navigate(['/cadastro-cliente']);
   }
