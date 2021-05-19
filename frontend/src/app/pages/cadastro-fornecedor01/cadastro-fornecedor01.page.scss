@@ -95,7 +95,7 @@ ion-content{
       ion-item{
         .text{
           font-family: 'Montserrat';
-          font-size: 12px;
+          font-size: clamp(0em, 1em + 1vw, 1em);
         }
       }
       ion-item{
@@ -115,14 +115,17 @@ ion-content{
         --padding-start: 15px;
         --padding-top: 12px;
         margin-bottom: 15px;
-        margin-left: 16px;
       }
       .btn_proxima{
         border: #A26DF8 solid;
         color: #A26DF8;
-        --padding-end: 140px;
-        --padding-start: 140px;
+        --padding-end: 0px;
+        --padding-start: 0px;
+        width: 100%;
         height: 70px;
+        font-family: 'Montserrat';
+        font-size: calc(0.8em + 0.2vw);
+        white-space: normal;
       }
     }
 }
