@@ -1,131 +1,149 @@
 //Fontes
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300;700&display=swap');
 
-ion-header{
-  ion-toolbar{
-    --background: linear-gradient(to right, rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));
-    width: 100%;
-
-    .menu{
-      max-width: 980px;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-
-      ion-title{
-        --title-width: 100px;
-        img{
-          width: 10%;
-          padding: 5px 0;
-        }
-      }
-      ion-buttons{
-        .btn_font{
-          font-size: 10px;
-          color: black;
-        }
-      }
-    }
-  }
-  ion-toolbar{
-    .menu{
-      max-width: 980px;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-
-      ion-title{
-        --title-width: 100px;
-        img{
-          width: 10%;
-          padding: 5px 0;
-        }
-      }
-      ion-buttons{
-        ion-icon{
-          font-size: 40px;
-        }
-      }
-    }
-  }
-}  
-
 ion-content{
+  #header{
+    background: linear-gradient(to right, rgba(248, 109, 112, 0.4), rgba(194, 163, 245, 0.4), rgba(163, 213, 245, 0.4));
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .cabeçalho_header_desk{
+    width: 100%;
+    max-width: 1100px;
+    padding: 5px;
+    display: flex;
+  }
+  .cabeçalho_header_mobile{
+    width: 100%;
+    padding: 5px;
+    display: none;
+  }
+  .img_header{
+    width: 9%;
+    min-width: 50px;
+    margin: 0 15px;
+  }
+  .espaço{
+    width: 60%;
+  }
+  .btn_header{
+    font-family: 'Montserrat';
+    font-size: min(12px, 2vh);
+    color: black;
+  }
+  .btn_cadastro{
+    --border-color: #A26DF8;
+    --border-radius: 0;
+    --border-width: 2px;
+    color: #A26DF8;
+    font-weight: bold;
+    --padding-bottom: 0px;
+    --padding-end: 20px;
+    --padding-start: 20px;
+    --padding-top: 0px;
+  }
   .centro{
-      width: 42%;
-      margin: 100px auto;
-      .icon_bolinhas{
-        margin: 0 auto;
-        width: 80px;
-        .bola01{
-          color: #E5D6D6;
-          margin: none;
-        }
-        .bola02{
-          color: #F86D70;
-          margin-left: 15px;
-          margin-right: 15px;
-        }
-        .bola03{
-          color: #E5D6D6;
-          margin: none;
-        }
+    max-width: 95%;
+    width: 683px;
+    margin: 40px auto;
+    .icon_bolinhas{
+      margin-left: 0%;
+      font-size: min(20px, 4vw);
+      text-align: center;
+      .bola01{
+        color: #E5D6D6;
+        margin: none;
       }
-      ion-item{
-        .arrow-back{
-          width: 40px;
-          height: 60px;
-          font-size: 32px;
-          color: black;
-          --border-radius: 0;
-          --padding-bottom: 0px;
-          --padding-end: 0px;
-          --padding-start: 0px;
-          --padding-top: 0px;
+      .bola02{
+        color: #F86D70;
+        margin-left: 10px;
+        margin-right: 10px;
       }
-        .titulo{
-          font-family: 'Montserrat';
-          font-weight: bold;
-          font-size: 32px;
-          margin: 0;
-        }
+      .bola03{
+        color: #E5D6D6;
+        margin: none;
       }
-      ion-item{
-        .text{
-          font-family: 'Montserrat';
-          font-size: clamp(0em, 1em + 1vw, 1em);
-        }
-      }
-      ion-item{
-        .label_input{
-          font-family: 'Montserrat';
-          font-weight: bold;
-          font-size: 16px;
-        }
-      }
-      ion-input{
-        --placeholder-font-family: 'Montserrat';
-        font-size: 14px;
-        --placeholder-color: black;
-        --placeholder-opacity: 0.7;
-        border: solid #EEE7E7 1px;
-        --padding-bottom: 12px;
-        --padding-start: 15px;
-        --padding-top: 12px;
-        margin-bottom: 15px;
-      }
-      .btn_proxima{
-        border: #A26DF8 solid;
-        color: #A26DF8;
+    }
+    ion-item{
+      .arrow-back{
+        font-size: 32px;
+        color: black;
+        height: 70px;
+        font-size: min(40px, 6vw);
+        border: 1px black;
+        --border-radius: 0;
+        --padding-bottom: 0px;
         --padding-end: 0px;
         --padding-start: 0px;
-        width: 100%;
-        height: 70px;
+        --padding-top: 0px;
+    }
+      .titulo{
         font-family: 'Montserrat';
-        font-size: calc(0.8em + 0.2vw);
+        font-weight: bold;
+        margin-left: 0%;
+        font-size: min(32px, 7vw);
         white-space: normal;
       }
     }
+    ion-item{
+      .text{
+        font-family: 'Montserrat';
+        font-size: min(15px, 4vw);
+        white-space: normal;
+      }
+    }
+    ion-item{
+      .label_input{
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: min(16px, 9vw);
+      }
+    }
+    ion-input{
+      --placeholder-font-family: 'Montserrat';
+      font-size: min(14px, 7vw);
+      --placeholder-color: black;
+      --placeholder-opacity: 0.7;
+      border: solid #EEE7E7 1px;
+      --padding-bottom: 12px;
+      --padding-start: 15px;
+      --padding-top: 12px;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    .btn_proxima{
+      border: #A26DF8 solid;
+      color: #A26DF8;
+      --padding-end: 0px;
+      --padding-start: 0px;
+      width: 100%;
+      height: 70px;
+      font-weight: bolder;
+      font-family: 'Montserrat';
+      font-size: min(16px, 6vw);
+      white-space: normal;
+      margin-left: 0%;
+    }
+  }
+}
+
+@media (max-width: 650px){
+  .cabeçalho_header_desk{
+    display: none;
+  }
+  .cabeçalho_header_mobile{
+    display: flex;
+  }
+  .espaço{
+    width: 80%;
+  }
+}
+
+@media (max-width: 255px){
+  .label_input{
+    text-align: center;
+  }
 }
